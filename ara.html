@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="fr-CA">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ARA · Automatisation de Rapport Audiologique | Le logiciel des audiologistes</title>
+<meta name="description" content="ARA automatise les calculs, l’interprétation et la mise en forme du rapport audiologique. Saisissez l’audiogramme : ARA applique vos normes et prépare la trame du rapport. Vous révisez, ajoutez vos recommandations et signez.">
+<link rel="icon" href="assets/favicon-32.png">
+<link rel="apple-touch-icon" href="assets/apple-touch-icon-180.png">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="wrap nav">
+    <a class="brand" href="index.html" aria-label="Accueil, Roxanne Bolduc, audiologiste">
+      <img src="assets/monogramme-rb-marine.svg" alt="Roxanne Bolduc, audiologiste" style="height:46px;width:auto">
+    </a>
+    <nav aria-label="Navigation principale">
+      <ul class="nav-links" id="menu">
+        <li><a href="index.html">Accueil</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="audiologiste.html">Audiologiste</a></li>
+        <li><a href="lieux.html">Lieux d’exercice</a></li>
+        <li><a href="blogue.html">Blogue</a></li>
+        <li><a href="ara.html" class="active">ARA</a></li>
+      </ul>
+    </nav>
+    <div class="nav-cta">
+      <a href="#contact-ara" class="btn btn--coral">Essayer ARA</a>
+      <button class="nav-toggle" aria-label="Ouvrir le menu" aria-expanded="false" aria-controls="menu"><span></span></button>
+    </div>
+  </div>
+</header>
+
+<!-- ===== Héros ARA ===== -->
+<section class="section dark ara-hero" style="position:relative;overflow:hidden">
+  <!-- Audiogramme décoratif en fond : O rouge (droite), X bleu (gauche) -->
+  <svg viewBox="0 0 1200 700" preserveAspectRatio="xMidYMid slice" aria-hidden="true" style="position:absolute;inset:0;width:100%;height:100%;opacity:.18;pointer-events:none">
+    <g stroke="#fff" stroke-width="1" opacity=".25">
+      <path d="M0 100H1200M0 200H1200M0 300H1200M0 400H1200M0 500H1200M0 600H1200"/>
+      <path d="M150 0V700M350 0V700M550 0V700M750 0V700M950 0V700M1150 0V700"/>
+    </g>
+    <polyline points="150,160 350,180 550,240 750,330 950,420 1150,470" fill="none" stroke="#f0a58e" stroke-width="2.5"/>
+    <g stroke="#f0a58e" stroke-width="3" fill="none">
+      <circle cx="150" cy="160" r="11"/><circle cx="350" cy="180" r="11"/><circle cx="550" cy="240" r="11"/>
+      <circle cx="750" cy="330" r="11"/><circle cx="950" cy="420" r="11"/><circle cx="1150" cy="470" r="11"/>
+    </g>
+    <polyline points="150,200 350,230 550,300 750,400 950,500 1150,540" fill="none" stroke="#8fb3e8" stroke-width="2.5"/>
+    <g stroke="#8fb3e8" stroke-width="3">
+      <path d="M140 190l20 20M160 190l-20 20"/><path d="M340 220l20 20M360 220l-20 20"/>
+      <path d="M540 290l20 20M560 290l-20 20"/><path d="M740 390l20 20M760 390l-20 20"/>
+      <path d="M940 490l20 20M960 490l-20 20"/><path d="M1140 530l20 20M1160 530l-20 20"/>
+    </g>
+  </svg>
+
+  <!-- Plume ARA, à droite de la bannière -->
+  <img class="ara-plume" src="assets/plume-ara.png" alt="" aria-hidden="true" style="right:5%;top:50%;transform:translateY(-50%) rotate(8deg);z-index:1">
+
+  <div class="wrap" style="position:relative;z-index:2">
+    <div><span class="eyebrow">Un logiciel pour les audiologistes</span></div>
+    <span class="ara-letters">ARA</span>
+    <p class="ara-expansion"><b class="r">A</b>utomatisation de <b class="b">R</b>apport <b class="v">A</b>udiologique</p>
+    <p class="lead" style="margin-top:1.4rem;max-width:52ch">Testez l’audition de votre patient. ARA calcule, interprète et met en forme un rapport soigné. Vous le révisez, ajoutez vos recommandations et votre plan d’intervention, puis vous signez.</p>
+    <div class="hero-cta" style="margin-top:2rem;margin-bottom:0">
+      <a class="btn btn--coral" href="#contact-ara">Devenir testeur·euse</a>
+      <a class="btn btn--outline-light" href="#fonctions">Voir les fonctions</a>
+    </div>
+  </div>
+</section>
+
+<!-- ===== Pitch ===== -->
+<section class="section" style="padding-bottom:2rem">
+  <div class="wrap" style="max-width:860px">
+    <p class="lead reveal" style="max-width:none;font-size:clamp(1.25rem,2.4vw,1.7rem);font-family:var(--serif)">ARA transforme la partie la plus lourde de votre pratique, les calculs, l’interprétation et la mise en forme, en un processus fluide et automatisé. Vous saisissez les données dans un audiogramme interactif, ARA génère les résultats et amorce la conclusion. Vous gardez le dernier mot&nbsp;: révision, recommandations, signature.</p>
+  </div>
+</section>
+
+<!-- ===== Fonctions ===== -->
+<section class="section" id="fonctions" style="padding-top:2rem">
+  <div class="wrap">
+    <div class="center reveal" style="max-width:680px;margin:0 auto 2.6rem">
+      <span class="eyebrow">Les fonctions</span>
+      <h2>Six façons de vous redonner du temps.</h2>
+    </div>
+    <div class="grid-3">
+      <article class="scard reveal">
+        <span class="num">01</span>
+        <div class="ic"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 20h16M6 16l4-10 3 6 2-3 3 7"/></svg></div>
+        <h3>Le rapport, automatisé</h3>
+        <p>Dès la saisie des seuils, ARA rédige la section résultat automatiquement, prépare une conclusion audiologique selon ce que vous aurez paramétré&nbsp;: degré et nature de la surdité selon la moyenne des sons purs, impact fonctionnel, détection des asymétries selon des critères publiés. Vous révisez, vous ajustez, vous signez.</p>
+      </article>
+      <article class="scard coral reveal">
+        <span class="num">02</span>
+        <div class="ic"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="4" y="3" width="16" height="18" rx="2"/><path d="M8 8h8M8 12h8M8 16h4"/></svg></div>
+        <h3>Fini l’arithmétique mentale</h3>
+        <p>Moyennes des sons purs, IIP (SII&nbsp;: count-the-dots), Charte Sprint, critères d’asymétrie, seuils nécessitant un masquage signalés en temps réel directement sur l’audiogramme&nbsp;: ARA calcule pendant que vous testez. Moins d’erreurs, moins de fatigue.</p>
+      </article>
+      <article class="scard reveal">
+        <span class="num">03</span>
+        <div class="ic"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M14 3H6a2 2 0 00-2 2v14a2 2 0 002 2h12a2 2 0 002-2V9z"/><path d="M14 3v6h6M9 15l2 2 4-4"/></svg></div>
+        <h3>Des documents impeccables</h3>
+        <p>Rapports PDF soignés, à votre image&nbsp;: logo, signature et en-tête personnalisés. Formulaire CNESST rempli automatiquement. Autorisation de transmission des résultats intégrée, avec consentement signé archivé au dossier. Fini le liquide correcteur et les ratures.</p>
+      </article>
+      <article class="scard reveal">
+        <span class="num">04</span>
+        <div class="ic"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="3"/><path d="M19 12a7 7 0 01-.2 1.6l2 1.6-2 3.4-2.4-.9a7 7 0 01-2.8 1.6L13 22h-2l-.6-2.7a7 7 0 01-2.8-1.6l-2.4.9-2-3.4 2-1.6A7 7 0 015 12c0-.5.1-1.1.2-1.6l-2-1.6 2-3.4 2.4.9a7 7 0 012.8-1.6L11 2h2l.6 2.7a7 7 0 012.8 1.6l2.4-.9 2 3.4-2 1.6c.1.5.2 1.1.2 1.6z"/></svg></div>
+        <h3>Vos normes</h3>
+        <p>Normes tympanométriques par groupe d’âge, échelle des degrés de perte, critères de concordance et d’asymétrie, atténuation interauriculaire&nbsp;: tout est ajustable. ARA interprète selon les références que vous avez choisies.</p>
+      </article>
+      <article class="scard coral reveal">
+        <span class="num">05</span>
+        <div class="ic"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 19l7-7a4.2 4.2 0 00-6-6l-7 7v5h5z"/><path d="M15 5l4 4"/></svg></div>
+        <h3>Vos formulations, en raccourcis</h3>
+        <p>Motif de consultation, histoire de cas, otoscopie, recommandations&nbsp;: vos phrases récurrentes s’insèrent d’un raccourci clavier, puis s’ajustent librement. Votre plume, en plus rapide.</p>
+      </article>
+      <article class="scard reveal">
+        <span class="num">06</span>
+        <div class="ic"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M3 7a2 2 0 012-2h4l2 2h8a2 2 0 012 2v9a2 2 0 01-2 2H5a2 2 0 01-2-2z"/></svg></div>
+        <h3>La gestion, simplifiée</h3>
+        <p>Dossiers patients organisés, rapports archivés automatiquement, liste de rendez-vous importable, envoi par courriel en un clic. Formulaire ASA et recommandations ORL en quelques clics.</p>
+      </article>
+    </div>
+
+    <div class="region-cta reveal" style="margin-top:2.6rem">
+      <div>
+        <h3 style="margin-bottom:.4rem">Au bout du compte, le temps gagné sur la paperasse revient à vos patients, et à vous.</h3>
+        <p class="muted" style="margin:0;max-width:58ch">Expliquer les résultats, répondre aux questions, conseiller&nbsp;: ARA s’occupe de la mise en forme, vous vous occupez de la personne devant vous.</p>
+      </div>
+      <a href="#contact-ara" class="btn btn--primary">Essayer ARA →</a>
+    </div>
+  </div>
+</section>
+
+<!-- ===== Pourquoi ARA ===== -->
+<section class="section dark" style="position:relative;overflow:hidden">
+  <img src="assets/plume-ara.png" alt="" aria-hidden="true" style="position:absolute;right:-3rem;bottom:-4rem;width:clamp(220px,30vw,420px);opacity:.16;transform:rotate(-14deg);pointer-events:none">
+  <div class="wrap" style="position:relative;z-index:2">
+    <span class="eyebrow">Pourquoi «&nbsp;ARA&nbsp;»&nbsp;?</span>
+    <h2 style="max-width:22ch">Automatisation de Rapport Audiologique.</h2>
+    <p class="lead" style="color:#b6c2cc;margin-top:1rem">Un nom qui va droit au but, comme le logiciel&nbsp;: moins de temps sur la paperasse, plus de temps pour ce qui compte, votre jugement clinique et vos clients.</p>
+    <p style="margin-top:1.2rem">Un logiciel conçu par une audiologiste en exercice, pour les réalités concrètes de la clinique.</p>
+  </div>
+</section>
+
+<!-- ===== Appel à l'action ===== -->
+<section class="section" id="contact-ara">
+  <div class="wrap">
+    <div class="cta-band reveal">
+      <svg class="cta-wave" viewBox="0 0 1200 200" preserveAspectRatio="none"><path d="M0 120 Q150 40 300 100 T600 90 T900 110 T1200 80" stroke="#d5583c" stroke-width="3" fill="none"/><path d="M0 150 Q150 90 300 140 T600 130 T900 150 T1200 120" stroke="#6ea3c4" stroke-width="3" fill="none"/></svg>
+      <div style="display:flex;justify-content:center;gap:.9rem;margin-bottom:1.6rem" aria-hidden="true">
+        <span style="width:16px;height:16px;border-radius:50%;background:var(--ara-rouge);display:inline-block"></span>
+        <span style="width:16px;height:16px;border-radius:50%;background:var(--ara-bleu);display:inline-block"></span>
+        <span style="width:16px;height:16px;border-radius:50%;background:var(--ara-vert);display:inline-block"></span>
+      </div>
+      <h2>Moins de charge mentale.<br>Plus de temps pour vos patients.</h2>
+      <p>ARA est en développement actif. Audiologistes&nbsp;: joignez-vous aux premiers essais et contribuez à façonner l’outil.</p>
+      <div class="btns">
+        <a class="btn btn--coral" href="mailto:audiologie.rb@gmail.com?subject=ARA%20%3A%20Je%20veux%20essayer">Écrire à Roxanne</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="footer-grid">
+      <div>
+        <a href="index.html" aria-label="Accueil, Roxanne Bolduc, audiologiste">
+          <img src="assets/logo-empile-creme.svg" alt="Roxanne Bolduc, audiologiste" style="width:150px">
+        </a>
+        <p class="about">ARA, Automatisation de Rapport Audiologique. Un logiciel conçu par Roxanne Bolduc, audiologiste indépendante.</p>
+        <p class="about">Membre de l’Ordre des orthophonistes et audiologistes du Québec (OOAQ) · n<sup>o</sup>&nbsp;4182</p>
+      </div>
+      <div>
+        <h4>Navigation</h4>
+        <ul>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="audiologiste.html">Audiologiste</a></li>
+          <li><a href="lieux.html">Lieux d’exercice</a></li>
+          <li><a href="blogue.html">Blogue</a></li>
+          <li><a href="ara.html">ARA, le logiciel</a></li>
+          <li><a href="confidentialite.html">Politique de confidentialité</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Points de service</h4>
+        <ul>
+          <li><a href="lieux.html#quebec">Québec · 790, route Jean-Gauvin, local 230 · (418)&nbsp;476-1455</a></li>
+          <li><a href="lieux.html#levis">Lévis · 5500, boul. Guillaume-Couture, bureau 111 · (418)&nbsp;837-3626</a></li>
+          <li><a href="lieux.html#montmagny">Montmagny · 83, boul. Taché Ouest · (418)&nbsp;248-7077</a></li>
+          <li><a href="lieux.html#st-jean-port-joli">Saint-Jean-Port-Joli · 442, route de l’Église, bureau 9 · (367)&nbsp;440-0202</a></li>
+          <li><a href="lieux.html#riviere-du-loup">Rivière-du-Loup · 200, rue Témiscouata, suite 210 · (418)&nbsp;862-2907</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 Roxanne Bolduc, audiologiste. Tous droits réservés.</span>
+      <span>ARA, Automatisation de Rapport Audiologique</span>
+    </div>
+  </div>
+</footer>
+
+<script src="main.js"></script>
+</body>
+</html>

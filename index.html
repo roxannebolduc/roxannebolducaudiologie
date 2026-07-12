@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="fr-CA">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Roxanne Bolduc · Audiologiste indépendante | Québec, Chaudière-Appalaches et Bas-Saint-Laurent</title>
+<meta name="description" content="Évaluations audiologiques adultes, pédiatriques et des acouphènes. Audiologiste indépendante exerçant dans cinq points de service : Québec, Lévis, Montmagny, Saint-Jean-Port-Joli et Rivière-du-Loup.">
+<link rel="icon" href="assets/favicon-32.png">
+<link rel="apple-touch-icon" href="assets/apple-touch-icon-180.png">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<!-- ===== EN-TÊTE ===== -->
+<header class="site-header">
+  <div class="wrap nav">
+    <a class="brand" href="index.html" aria-label="Accueil, Roxanne Bolduc, audiologiste">
+      <img src="assets/monogramme-rb-marine.svg" alt="Roxanne Bolduc, audiologiste" style="height:46px;width:auto">
+    </a>
+    <nav aria-label="Navigation principale">
+      <ul class="nav-links" id="menu">
+        <li><a href="index.html" class="active">Accueil</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="audiologiste.html">Audiologiste</a></li>
+        <li><a href="lieux.html">Lieux d’exercice</a></li>
+        <li><a href="blogue.html">Blogue</a></li>
+        <li><a href="ara.html">ARA</a></li>
+      </ul>
+    </nav>
+    <div class="nav-cta">
+      <a href="lieux.html" class="btn btn--coral">Rendez-vous</a>
+      <button class="nav-toggle" aria-label="Ouvrir le menu" aria-expanded="false" aria-controls="menu"><span></span></button>
+    </div>
+  </div>
+</header>
+
+<!-- ===== HÉRO ===== -->
+<section class="hero">
+  <div class="wrap hero-grid">
+    <div>
+      <span class="eyebrow" style="white-space:nowrap">Pratique indépendante · Québec, Chaudière-Appalaches et Bas-Saint-Laurent</span>
+      <p style="font-family:var(--display);font-weight:700;font-size:clamp(1.7rem, 1.2rem + 2.2vw, 2.6rem);letter-spacing:-.02em;line-height:1.1;margin:0 0 1rem;color:var(--ink)">Roxanne Bolduc, <span style="color:var(--azure)">audiologiste</span></p>
+      <h1>Bien entendre, <span class="hl">ça change le quotidien</span>.</h1>
+      <p class="lead">J’évalue votre audition avec rigueur et je prends le temps de vous expliquer les résultats, pour que vous sachiez exactement où vous en êtes.</p>
+      <div class="hero-cta">
+        <a href="lieux.html" class="btn btn--primary">Prendre rendez-vous <svg class="arw" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+        <a href="services.html" class="btn btn--ghost">Voir les services</a>
+      </div>
+      <div class="hero-meta">
+        <div><b>2015</b><span>Maîtrise, Université de Montréal</span></div>
+        <div><b>0 à 99 ans</b><span>Enfants, adultes et aînés</span></div>
+        <div><b>5 points de service</b><span>De Québec à Rivière-du-Loup</span></div>
+      </div>
+    </div>
+
+    <!-- Signature : audiogramme animé -->
+    <div class="hero-audiogram">
+      <div class="audiocard reveal">
+        <div class="ac-head">
+          <span class="ac-title">Audiogramme tonal</span>
+          <div class="ac-legend">
+            <i><span class="dot-r"></span> Oreille droite</i>
+            <i><span class="dot-l">✕</span> Oreille gauche</i>
+          </div>
+        </div>
+        <svg viewBox="0 0 480 380" width="100%" role="img" aria-label="Audiogramme illustratif montrant les seuils auditifs de l'oreille droite et gauche par fréquence.">
+          <!-- grille horizontale (dB) -->
+          <g>
+            <line class="grid-line major" x1="64" y1="20"  x2="440" y2="20"/>
+            <line class="grid-line" x1="64" y1="74"  x2="440" y2="74"/>
+            <line class="grid-line" x1="64" y1="128" x2="440" y2="128"/>
+            <line class="grid-line" x1="64" y1="182" x2="440" y2="182"/>
+            <line class="grid-line" x1="64" y1="236" x2="440" y2="236"/>
+            <line class="grid-line" x1="64" y1="290" x2="440" y2="290"/>
+            <line class="grid-line major" x1="64" y1="344" x2="440" y2="344"/>
+          </g>
+          <!-- grille verticale (Hz) -->
+          <g>
+            <line class="grid-line" x1="64"  y1="20" x2="64"  y2="344"/>
+            <line class="grid-line" x1="139" y1="20" x2="139" y2="344"/>
+            <line class="grid-line" x1="214" y1="20" x2="214" y2="344"/>
+            <line class="grid-line" x1="290" y1="20" x2="290" y2="344"/>
+            <line class="grid-line" x1="365" y1="20" x2="365" y2="344"/>
+            <line class="grid-line" x1="440" y1="20" x2="440" y2="344"/>
+          </g>
+          <!-- libellés dB -->
+          <g class="axis-label" text-anchor="end">
+            <text x="54" y="24">0</text><text x="54" y="78">20</text><text x="54" y="132">40</text>
+            <text x="54" y="186">60</text><text x="54" y="240">80</text><text x="54" y="294">100</text><text x="54" y="348">120</text>
+          </g>
+          <!-- libellés Hz -->
+          <g class="axis-label" text-anchor="middle">
+            <text x="64" y="362">250</text><text x="139" y="362">500</text><text x="214" y="362">1k</text>
+            <text x="290" y="362">2k</text><text x="365" y="362">4k</text><text x="440" y="362">8k</text>
+          </g>
+          <!-- tracés -->
+          <polyline class="plot-line r anim-line" points="64,47 139,60 214,60 290,74 365,101 440,114"/>
+          <polyline class="plot-line l anim-line d2" points="64,60 139,74 214,87 290,101 365,128 440,141"/>
+          <!-- symboles oreille droite (O rouge) -->
+          <g>
+            <g class="anim-pt" style="animation-delay:.5s"><circle cx="64" cy="47" r="6" fill="none" stroke="#d5583c" stroke-width="2.5"/></g>
+            <g class="anim-pt" style="animation-delay:.6s"><circle cx="139" cy="60" r="6" fill="none" stroke="#d5583c" stroke-width="2.5"/></g>
+            <g class="anim-pt" style="animation-delay:.7s"><circle cx="214" cy="60" r="6" fill="none" stroke="#d5583c" stroke-width="2.5"/></g>
+            <g class="anim-pt" style="animation-delay:.8s"><circle cx="290" cy="74" r="6" fill="none" stroke="#d5583c" stroke-width="2.5"/></g>
+            <g class="anim-pt" style="animation-delay:.9s"><circle cx="365" cy="101" r="6" fill="none" stroke="#d5583c" stroke-width="2.5"/></g>
+            <g class="anim-pt" style="animation-delay:1s"><circle cx="440" cy="114" r="6" fill="none" stroke="#d5583c" stroke-width="2.5"/></g>
+          </g>
+          <!-- symboles oreille gauche (X bleu) -->
+          <g stroke="#245c82" stroke-width="2.5" stroke-linecap="round">
+            <g class="anim-pt" style="animation-delay:.85s"><line x1="59" y1="55" x2="69" y2="65"/><line x1="69" y1="55" x2="59" y2="65"/></g>
+            <g class="anim-pt" style="animation-delay:.95s"><line x1="134" y1="69" x2="144" y2="79"/><line x1="144" y1="69" x2="134" y2="79"/></g>
+            <g class="anim-pt" style="animation-delay:1.05s"><line x1="209" y1="82" x2="219" y2="92"/><line x1="219" y1="82" x2="209" y2="92"/></g>
+            <g class="anim-pt" style="animation-delay:1.15s"><line x1="285" y1="96" x2="295" y2="106"/><line x1="295" y1="96" x2="285" y2="106"/></g>
+            <g class="anim-pt" style="animation-delay:1.25s"><line x1="360" y1="123" x2="370" y2="133"/><line x1="370" y1="123" x2="360" y2="133"/></g>
+            <g class="anim-pt" style="animation-delay:1.35s"><line x1="435" y1="136" x2="445" y2="146"/><line x1="445" y1="136" x2="435" y2="146"/></g>
+          </g>
+        </svg>
+        <p style="font-size:.76rem;color:var(--muted);text-align:center;margin:.4rem 0 .2rem">Illustration : fréquence (Hz) × intensité (dB HL)</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== RUBAN CONFIANCE ===== -->
+<div class="trust">
+  <div class="wrap">
+    <p><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 12l2 2 4-4"/><circle cx="12" cy="12" r="9"/></svg> Membre de l’Ordre des orthophonistes et audiologistes du Québec · n<sup>o</sup>&nbsp;4182</p>
+    <p><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2a7 7 0 00-7 7c0 5 7 13 7 13s7-8 7-13a7 7 0 00-7-7z"/><circle cx="12" cy="9" r="2.5"/></svg> Cinq points de service, de Québec à Rivière-du-Loup</p>
+    <p><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg> Aucune référence médicale requise</p>
+  </div>
+</div>
+
+<!-- ===== POURQUOI ÉVALUER ===== -->
+<section class="section">
+  <div class="wrap split">
+    <div class="reveal">
+      <span class="eyebrow">Pourquoi évaluer son audition</span>
+      <h2>Bien comprendre son audition, pour mieux en prendre soin</h2>
+      <p class="lead">L’audition joue un rôle essentiel dans la santé globale, les relations et la qualité de vie, à tout âge. Pourtant, il est difficile d’en prendre soin sans d’abord bien la connaître.</p>
+      <p>C’est là que j’interviens. En tant qu’audiologiste, je réalise une évaluation complète de votre audition ou de celle de votre enfant, puis je prends le temps de vous expliquer les résultats clairement, sans jargon. Vous repartez avec un portrait précis de votre santé auditive, votre rapport, et surtout la compréhension nécessaire pour faire des choix éclairés.</p>
+      <p>Parce qu’une personne bien informée est une personne motivée à agir&nbsp;: protéger son audition, améliorer sa communication, préserver sa participation sociale et son bien-être.</p>
+      <p><strong>Prenez rendez-vous dès aujourd’hui. Ensemble, nous ferons le point sur votre audition.</strong></p>
+      <div style="margin-top:1.4rem"><a href="lieux.html" class="btn btn--primary">Prendre rendez-vous →</a></div>
+    </div>
+    <div class="split-media reveal">
+      <div class="media-frame" style="aspect-ratio:3/4;max-width:420px;justify-self:center">
+        <img src="assets/portrait-assise.jpg" alt="Roxanne Bolduc, audiologiste, assise et souriante" style="width:100%;height:100%;object-fit:cover">
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== SERVICES ===== -->
+<section class="section" style="background:var(--paper-2);border-top:1px solid var(--line);border-bottom:1px solid var(--line)">
+  <div class="wrap">
+    <div class="center reveal" style="max-width:760px;margin:0 auto 2.8rem">
+      <span class="eyebrow">Services d’évaluation</span>
+      <h2>Trois évaluations, une même rigueur.</h2>
+      <p class="lead">Des tests reconnus par la RAMQ, la CNESST et Anciens Combattants Canada. Des résultats expliqués clairement et des recommandations selon vos besoins.</p>
+    </div>
+    <div class="grid-3">
+      <article class="scard reveal">
+        <div class="ic"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 12a8 8 0 0116 0c0 3-2 4-2 6a3 3 0 01-6 0"/><path d="M9 10a3 3 0 016 0"/></svg></div>
+        <h3>Évaluation audiologique, adulte</h3>
+        <p>Un bilan auditif complet pour comprendre l’origine de vos difficultés d’écoute et de vos autres symptômes, puis identifier les prochaines étapes.</p>
+        <a href="services.html#adulte" class="lk">En savoir plus →</a>
+      </article>
+      <article class="scard coral reveal">
+        <div class="ic"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="8" r="3.2"/><path d="M6 21c0-3.3 2.7-6 6-6s6 2.7 6 6"/></svg></div>
+        <h3>Évaluation audiologique, pédiatrique</h3>
+        <p>Des méthodes adaptées à chaque âge, dès les premiers mois de vie, dans une approche ludique où l’enfant participe par le jeu.</p>
+        <a href="services.html#pediatrique" class="lk">En savoir plus →</a>
+      </article>
+      <article class="scard reveal">
+        <div class="ic"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 14c1.5-3 3-3 4-1s2.5 5 4 3 2-6 4-5 2 3 4 3"/></svg></div>
+        <h3>Évaluation des acouphènes</h3>
+        <p>Comprendre le sifflement ou le bourdonnement, en mesurer l’impact, en rechercher la cause et identifier des moyens concrets pour mieux vivre avec.</p>
+        <a href="services.html#acouphenes" class="lk">En savoir plus →</a>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ===== INDÉPENDANCE ===== -->
+<section class="section">
+  <div class="wrap split">
+    <div class="reveal">
+      <span class="eyebrow">La pratique</span>
+      <h2>Indépendante, par choix.</h2>
+      <p class="lead">Mon rôle est d’évaluer votre audition et vos besoins, puis de vous en présenter un portrait juste, avec des options claires.</p>
+      <p>Au Québec, l’audiologiste ne vend pas d’appareils&nbsp;: c’est réservé aux audioprothésistes. Mes recommandations reposent donc uniquement sur vos besoins.</p>
+      <ul>
+        <li><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg> Je réalise mes consultations dans les locaux de cliniques d’audioprothésistes partenaires, à cinq points de service entre Québec et Rivière-du-Loup.</li>
+        <li><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg> Aucune référence médicale n’est requise pour consulter une audiologiste au privé.</li>
+        <li><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg> Si votre situation le demande, je vous dirige vers le bon professionnel&nbsp;: ORL, audioprothésiste, physiothérapeute ou autre.</li>
+      </ul>
+      <div style="margin-top:1.8rem"><a href="lieux.html" class="btn btn--ghost">Les cinq points de service →</a></div>
+    </div>
+    <div class="split-media reveal">
+      <div class="media-frame" style="display:grid;place-items:center;background:linear-gradient(150deg,var(--azure-tint),#fff)">
+        <svg width="72%" viewBox="0 0 240 200" fill="none" aria-hidden="true">
+          <path d="M20 150 Q60 60 120 100 T220 70" stroke="#245c82" stroke-width="3" fill="none" stroke-linecap="round"/>
+          <path d="M20 168 Q70 110 120 130 T220 110" stroke="#d5583c" stroke-width="3" fill="none" stroke-linecap="round" opacity=".8"/>
+          <circle cx="120" cy="70" r="26" fill="#fff" stroke="#245c82" stroke-width="2.5"/>
+          <path d="M108 70a12 12 0 0124 0c0 5-4 7-4 11" stroke="#245c82" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+          <circle cx="128" cy="86" r="1.6" fill="#245c82"/>
+        </svg>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== PROFESSIONNELS & PARTENAIRES ===== -->
+<section class="section" style="padding-top:0;padding-bottom:0">
+  <div class="wrap">
+    <div class="region-cta reveal">
+      <div>
+        <span class="eyebrow" style="margin-bottom:.6rem">Professionnels &amp; partenaires</span>
+        <h3 style="margin-bottom:.4rem">Audioprothésistes, médecins, milieux de travail.</h3>
+        <p class="muted" style="margin:0;max-width:58ch">Vous cherchez une audiologiste indépendante pour des évaluations dans votre clinique, des rapports clairs et transmis rapidement, ou un corridor de service fiable vers l’ORL au besoin&nbsp;? Parlons-en.</p>
+      </div>
+      <a href="audiologiste.html#equipe" class="btn btn--primary">Faire connaissance →</a>
+    </div>
+  </div>
+</section>
+
+<!-- ===== BANDE ARA ===== -->
+<section class="section dark" style="position:relative;overflow:hidden;margin-top:clamp(3.6rem,7vw,6.2rem)">
+  <img src="assets/plume-ara.png" alt="" aria-hidden="true" style="position:absolute;right:4%;top:50%;transform:translateY(-50%) rotate(10deg);width:clamp(130px,16vw,220px);opacity:.9;pointer-events:none">
+  <div class="wrap" style="position:relative;z-index:2;max-width:var(--maxw)">
+    <div style="max-width:640px">
+      <span class="eyebrow">Pour les audiologistes</span>
+      <h2>Vous testez. <span style="color:#f0a58e">ARA prépare.</span></h2>
+      <p class="lead" style="color:#b6c2cc">ARA, pour Automatisation de Rapport Audiologique, calcule, interprète selon vos normes et produit un rapport impeccable. Il ne vous reste qu’à inscrire vos recommandations et votre plan d’intervention, puis à signer. Un logiciel conçu par une audiologiste, pour les audiologistes.</p>
+      <div style="margin-top:1.6rem"><a href="ara.html" class="btn btn--outline-light">Découvrir ARA →</a></div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== BLOGUE ===== -->
+<section class="section">
+  <div class="wrap">
+    <div style="display:flex;justify-content:space-between;align-items:flex-end;flex-wrap:wrap;gap:1rem;margin-bottom:2.4rem" class="reveal">
+      <div>
+        <span class="eyebrow">Le blogue</span>
+        <h2>Comprendre l’audition, un article à la fois.</h2>
+      </div>
+      <a href="blogue.html" class="btn btn--ghost">Tous les articles →</a>
+    </div>
+    <div class="blog-grid">
+      <article class="post reveal">
+        <a href="blogue-evaluation-pediatrique.html">
+          <div class="thumb" style="background:var(--aqua)">
+            <span class="cat">Pédiatrie</span>
+            <img src="assets/guide-pediatrique-1.jpg" alt="Couverture du guide : 5 raisons de faire évaluer l’audition de votre enfant" loading="lazy">
+          </div>
+        </a>
+        <div class="body">
+          <div class="date">Guide téléchargeable</div>
+          <h3><a href="blogue-evaluation-pediatrique.html">5 raisons de faire évaluer l’audition de votre enfant</a></h3>
+          <p>Parole, otites silencieuses, fatigue, école&nbsp;: pourquoi une évaluation change le parcours d’un enfant.</p>
+          <a class="lk" href="blogue-evaluation-pediatrique.html">Lire l’article →</a>
+        </div>
+      </article>
+      <article class="post reveal">
+        <a href="blogue-acouphenes.html">
+          <div class="thumb" style="background:var(--azure-tint)">
+            <span class="cat">Acouphènes</span>
+            <svg viewBox="0 0 300 190" preserveAspectRatio="none"><path d="M0 120 Q40 60 80 100 T160 80 T240 110 T300 90" stroke="#245c82" stroke-width="3" fill="none"/><path d="M0 140 Q50 90 100 120 T200 110 T300 130" stroke="#d5583c" stroke-width="2.5" fill="none" opacity=".6"/></svg>
+          </div>
+        </a>
+        <div class="body">
+          <div class="date">Vulgarisation</div>
+          <h3><a href="blogue-acouphenes.html">D’où vient vraiment l’acouphène&nbsp;?</a></h3>
+          <p>Sifflement ou bourdonnement&nbsp;: ce son naît le plus souvent dans le cerveau. Comprendre pourquoi change toute la façon de l’aborder.</p>
+          <a class="lk" href="blogue-acouphenes.html">Lire l’article →</a>
+        </div>
+      </article>
+      <article class="post reveal">
+        <a href="blogue-bruit.html">
+          <div class="thumb" style="background:var(--coral-tint)">
+            <span class="cat">Prévention</span>
+            <svg viewBox="0 0 300 190" preserveAspectRatio="none"><g fill="#245c82"><rect x="45" y="130" width="20" height="40" opacity=".45"/><rect x="85" y="110" width="20" height="60" opacity=".6"/><rect x="125" y="88" width="20" height="82" opacity=".75"/><rect x="165" y="60" width="20" height="110" opacity=".9"/></g><rect x="205" y="34" width="20" height="136" fill="#d5583c"/></svg>
+          </div>
+        </a>
+        <div class="body">
+          <div class="date">Vulgarisation</div>
+          <h3><a href="blogue-bruit.html">Bruit et audition&nbsp;: prévenir vaut mieux que guérir</a></h3>
+          <p>Travailleurs, musiciens, amateurs de concerts&nbsp;: la surdité due au bruit est évitable. Voici comment.</p>
+          <a class="lk" href="blogue-bruit.html">Lire l’article →</a>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ===== CTA FINAL ===== -->
+<section class="section" style="padding-top:0">
+  <div class="wrap">
+    <div class="cta-band reveal">
+      <svg class="cta-wave" viewBox="0 0 1200 200" preserveAspectRatio="none"><path d="M0 120 Q150 40 300 100 T600 90 T900 110 T1200 80" stroke="#d5583c" stroke-width="3" fill="none"/><path d="M0 150 Q150 90 300 140 T600 130 T900 150 T1200 120" stroke="#6ea3c4" stroke-width="3" fill="none"/></svg>
+      <h2>Prêt à faire le point sur votre audition&nbsp;?</h2>
+      <p>Prenez rendez-vous au point de service de votre choix&nbsp;: les coordonnées complètes sont sur la page Lieux d’exercice.</p>
+      <div class="btns">
+        <a href="lieux.html" class="btn btn--coral">Prendre rendez-vous</a>
+        <a href="audiologiste.html#equipe" class="btn btn--outline-light">Devenir partenaire</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== PIED DE PAGE ===== -->
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="footer-grid">
+      <div>
+        <a href="index.html" aria-label="Accueil, Roxanne Bolduc, audiologiste">
+          <img src="assets/logo-empile-creme.svg" alt="Roxanne Bolduc, audiologiste" style="width:150px">
+        </a>
+        <p class="about">Audiologiste indépendante. Services d’évaluation en audiologie pour adultes et enfants dans la Capitale-Nationale, Chaudière-Appalaches et le Bas-Saint-Laurent.</p>
+        <p class="about">Membre de l’Ordre des orthophonistes et audiologistes du Québec (OOAQ) · n<sup>o</sup>&nbsp;4182</p>
+      </div>
+      <div>
+        <h4>Navigation</h4>
+        <ul>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="audiologiste.html">Audiologiste</a></li>
+          <li><a href="lieux.html">Lieux d’exercice</a></li>
+          <li><a href="blogue.html">Blogue</a></li>
+          <li><a href="ara.html">ARA, le logiciel</a></li>
+          <li><a href="confidentialite.html">Politique de confidentialité</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Points de service</h4>
+        <ul>
+          <li><a href="lieux.html#quebec">Québec · 790, route Jean-Gauvin, local 230 · (418)&nbsp;476-1455</a></li>
+          <li><a href="lieux.html#levis">Lévis · 5500, boul. Guillaume-Couture, bureau 111 · (418)&nbsp;837-3626</a></li>
+          <li><a href="lieux.html#montmagny">Montmagny · 83, boul. Taché Ouest · (418)&nbsp;248-7077</a></li>
+          <li><a href="lieux.html#st-jean-port-joli">Saint-Jean-Port-Joli · 442, route de l’Église, bureau 9 · (367)&nbsp;440-0202</a></li>
+          <li><a href="lieux.html#riviere-du-loup">Rivière-du-Loup · 200, rue Témiscouata, suite 210 · (418)&nbsp;862-2907</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 Roxanne Bolduc, audiologiste. Tous droits réservés.</span>
+      <span>ARA, Automatisation de Rapport Audiologique</span>
+    </div>
+  </div>
+</footer>
+
+<script src="main.js"></script>
+</body>
+</html>
