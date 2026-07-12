@@ -179,6 +179,30 @@ p{margin:0 0 1rem}
 .hero-meta span{font-size:.82rem;color:var(--muted)}
 @media (max-width:860px){.hero-grid{grid-template-columns:1fr}.hero-audiogram{max-width:480px}}
 
+/* ---------- Portrait du héro (arche + mini audiogramme) ---------- */
+.hero-portrait{position:relative;justify-self:end;width:min(420px,100%)}
+.portrait-arch{
+  border-radius:var(--radius-lg);
+  overflow:hidden;border:1px solid var(--line);box-shadow:var(--shadow-lg);
+  aspect-ratio:4/5;background:var(--paper-2);
+}
+.portrait-arch img{width:100%;height:100%;object-fit:cover}
+.mini-audiocard{
+  position:absolute;left:-3.6rem;bottom:1.8rem;width:235px;
+  background:var(--card);border:1px solid var(--line);border-radius:var(--radius);
+  box-shadow:var(--shadow-lg);padding:.85rem .9rem .55rem;
+}
+.mini-audiocard .t{
+  font-family:var(--display);font-weight:600;font-size:.78rem;color:var(--ink);
+  display:flex;justify-content:space-between;align-items:center;margin-bottom:.4rem;
+}
+.mini-audiocard .t i{font-style:normal;font-family:var(--body);font-weight:600;font-size:.62rem;color:var(--muted)}
+@media (max-width:1060px){.mini-audiocard{left:-1.2rem}}
+@media (max-width:860px){
+  .hero-portrait{justify-self:start;margin-top:.6rem}
+  .mini-audiocard{left:auto;right:-.4rem;bottom:1.2rem}
+}
+
 /* ---------- Audiogramme (signature) ---------- */
 .audiocard{
   background:var(--card);border:1px solid var(--line);border-radius:var(--radius-lg);

@@ -54,12 +54,13 @@
     </g>
   </svg>
 
-  <!-- Plume ARA, à droite de la bannière -->
-  <img class="ara-plume" src="assets/plume-ara.png" alt="" aria-hidden="true" style="right:5%;top:50%;transform:translateY(-50%) rotate(8deg);z-index:1">
-
   <div class="wrap" style="position:relative;z-index:2">
     <div><span class="eyebrow">Un logiciel pour les audiologistes</span></div>
-    <span class="ara-letters">ARA</span>
+    <!-- Le mot ARA et sa plume, alignés sur la même ligne et la même hauteur -->
+    <div style="display:flex;align-items:center;gap:.16em;font-size:clamp(4.6rem,14vw,10rem);line-height:.9">
+      <span class="ara-letters" style="font-size:1em">ARA</span>
+      <img src="assets/plume-ara.png" alt="" aria-hidden="true" style="height:.94em;width:auto;transform:rotate(8deg);filter:drop-shadow(0 14px 24px rgba(0,0,0,.35));flex:none">
+    </div>
     <p class="ara-expansion"><b class="r">A</b>utomatisation de <b class="b">R</b>apport <b class="v">A</b>udiologique</p>
     <p class="lead" style="margin-top:1.4rem;max-width:52ch">Testez l’audition de votre patient. ARA calcule, interprète et met en forme un rapport soigné. Vous le révisez, ajoutez vos recommandations et votre plan d’intervention, puis vous signez.</p>
     <div class="hero-cta" style="margin-top:2rem;margin-bottom:0">
@@ -170,7 +171,7 @@
           <img src="assets/logo-empile-creme.svg" alt="Roxanne Bolduc, audiologiste" style="width:150px">
         </a>
         <p class="about">ARA, Automatisation de Rapport Audiologique. Un logiciel conçu par Roxanne Bolduc, audiologiste indépendante.</p>
-        <p class="about">Membre de l’Ordre des orthophonistes et audiologistes du Québec (OOAQ) · n<sup>o</sup>&nbsp;4182</p>
+        <p class="about">Membre de l’Ordre des orthophonistes et audiologistes du Québec (OOAQ) · #4182</p>
       </div>
       <div>
         <h4>Navigation</h4>

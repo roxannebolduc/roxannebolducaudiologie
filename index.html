@@ -39,9 +39,9 @@
   <div class="wrap hero-grid">
     <div>
       <span class="eyebrow" style="white-space:nowrap">Pratique indépendante · Québec, Chaudière-Appalaches et Bas-Saint-Laurent</span>
-      <p style="font-family:var(--display);font-weight:700;font-size:clamp(1.7rem, 1.2rem + 2.2vw, 2.6rem);letter-spacing:-.02em;line-height:1.1;margin:0 0 1rem;color:var(--ink)">Roxanne Bolduc, <span style="color:var(--azure)">audiologiste</span></p>
-      <h1>Bien entendre, <span class="hl">ça change le quotidien</span>.</h1>
-      <p class="lead">J’évalue votre audition avec rigueur et je prends le temps de vous expliquer les résultats, pour que vous sachiez exactement où vous en êtes.</p>
+      <p style="font-family:var(--display);font-weight:600;font-size:clamp(1.15rem, 1rem + .8vw, 1.5rem);letter-spacing:-.01em;line-height:1.15;margin:0 0 .8rem;color:var(--ink)">Roxanne Bolduc, <span style="color:var(--azure)">audiologiste</span></p>
+      <h1>Bien comprendre, <span class="hl">ça change le quotidien</span>.</h1>
+      <p class="lead"><strong>Ayez l’heure juste sur l’état de votre audition.</strong> Une évaluation complète et des explications claires&nbsp;: tout ce qu’il faut pour décider de la suite en toute confiance.</p>
       <div class="hero-cta">
         <a href="lieux.html" class="btn btn--primary">Prendre rendez-vous <svg class="arw" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
         <a href="services.html" class="btn btn--ghost">Voir les services</a>
@@ -53,69 +53,10 @@
       </div>
     </div>
 
-    <!-- Signature : audiogramme animé -->
-    <div class="hero-audiogram">
-      <div class="audiocard reveal">
-        <div class="ac-head">
-          <span class="ac-title">Audiogramme tonal</span>
-          <div class="ac-legend">
-            <i><span class="dot-r"></span> Oreille droite</i>
-            <i><span class="dot-l">✕</span> Oreille gauche</i>
-          </div>
-        </div>
-        <svg viewBox="0 0 480 380" width="100%" role="img" aria-label="Audiogramme illustratif montrant les seuils auditifs de l'oreille droite et gauche par fréquence.">
-          <!-- grille horizontale (dB) -->
-          <g>
-            <line class="grid-line major" x1="64" y1="20"  x2="440" y2="20"/>
-            <line class="grid-line" x1="64" y1="74"  x2="440" y2="74"/>
-            <line class="grid-line" x1="64" y1="128" x2="440" y2="128"/>
-            <line class="grid-line" x1="64" y1="182" x2="440" y2="182"/>
-            <line class="grid-line" x1="64" y1="236" x2="440" y2="236"/>
-            <line class="grid-line" x1="64" y1="290" x2="440" y2="290"/>
-            <line class="grid-line major" x1="64" y1="344" x2="440" y2="344"/>
-          </g>
-          <!-- grille verticale (Hz) -->
-          <g>
-            <line class="grid-line" x1="64"  y1="20" x2="64"  y2="344"/>
-            <line class="grid-line" x1="139" y1="20" x2="139" y2="344"/>
-            <line class="grid-line" x1="214" y1="20" x2="214" y2="344"/>
-            <line class="grid-line" x1="290" y1="20" x2="290" y2="344"/>
-            <line class="grid-line" x1="365" y1="20" x2="365" y2="344"/>
-            <line class="grid-line" x1="440" y1="20" x2="440" y2="344"/>
-          </g>
-          <!-- libellés dB -->
-          <g class="axis-label" text-anchor="end">
-            <text x="54" y="24">0</text><text x="54" y="78">20</text><text x="54" y="132">40</text>
-            <text x="54" y="186">60</text><text x="54" y="240">80</text><text x="54" y="294">100</text><text x="54" y="348">120</text>
-          </g>
-          <!-- libellés Hz -->
-          <g class="axis-label" text-anchor="middle">
-            <text x="64" y="362">250</text><text x="139" y="362">500</text><text x="214" y="362">1k</text>
-            <text x="290" y="362">2k</text><text x="365" y="362">4k</text><text x="440" y="362">8k</text>
-          </g>
-          <!-- tracés -->
-          <polyline class="plot-line r anim-line" points="64,47 139,60 214,60 290,74 365,101 440,114"/>
-          <polyline class="plot-line l anim-line d2" points="64,60 139,74 214,87 290,101 365,128 440,141"/>
-          <!-- symboles oreille droite (O rouge) -->
-          <g>
-            <g class="anim-pt" style="animation-delay:.5s"><circle cx="64" cy="47" r="6" fill="none" stroke="#d5583c" stroke-width="2.5"/></g>
-            <g class="anim-pt" style="animation-delay:.6s"><circle cx="139" cy="60" r="6" fill="none" stroke="#d5583c" stroke-width="2.5"/></g>
-            <g class="anim-pt" style="animation-delay:.7s"><circle cx="214" cy="60" r="6" fill="none" stroke="#d5583c" stroke-width="2.5"/></g>
-            <g class="anim-pt" style="animation-delay:.8s"><circle cx="290" cy="74" r="6" fill="none" stroke="#d5583c" stroke-width="2.5"/></g>
-            <g class="anim-pt" style="animation-delay:.9s"><circle cx="365" cy="101" r="6" fill="none" stroke="#d5583c" stroke-width="2.5"/></g>
-            <g class="anim-pt" style="animation-delay:1s"><circle cx="440" cy="114" r="6" fill="none" stroke="#d5583c" stroke-width="2.5"/></g>
-          </g>
-          <!-- symboles oreille gauche (X bleu) -->
-          <g stroke="#245c82" stroke-width="2.5" stroke-linecap="round">
-            <g class="anim-pt" style="animation-delay:.85s"><line x1="59" y1="55" x2="69" y2="65"/><line x1="69" y1="55" x2="59" y2="65"/></g>
-            <g class="anim-pt" style="animation-delay:.95s"><line x1="134" y1="69" x2="144" y2="79"/><line x1="144" y1="69" x2="134" y2="79"/></g>
-            <g class="anim-pt" style="animation-delay:1.05s"><line x1="209" y1="82" x2="219" y2="92"/><line x1="219" y1="82" x2="209" y2="92"/></g>
-            <g class="anim-pt" style="animation-delay:1.15s"><line x1="285" y1="96" x2="295" y2="106"/><line x1="295" y1="96" x2="285" y2="106"/></g>
-            <g class="anim-pt" style="animation-delay:1.25s"><line x1="360" y1="123" x2="370" y2="133"/><line x1="370" y1="123" x2="360" y2="133"/></g>
-            <g class="anim-pt" style="animation-delay:1.35s"><line x1="435" y1="136" x2="445" y2="146"/><line x1="445" y1="136" x2="435" y2="146"/></g>
-          </g>
-        </svg>
-        <p style="font-size:.76rem;color:var(--muted);text-align:center;margin:.4rem 0 .2rem">Illustration : fréquence (Hz) × intensité (dB HL)</p>
+    <!-- Portrait en arche -->
+    <div class="hero-portrait reveal">
+      <div class="portrait-arch">
+        <img src="assets/portrait-assise.jpg" alt="Roxanne Bolduc, audiologiste, assise et souriante" width="1200" height="1799">
       </div>
     </div>
   </div>
@@ -124,34 +65,14 @@
 <!-- ===== RUBAN CONFIANCE ===== -->
 <div class="trust">
   <div class="wrap">
-    <p><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 12l2 2 4-4"/><circle cx="12" cy="12" r="9"/></svg> Membre de l’Ordre des orthophonistes et audiologistes du Québec · n<sup>o</sup>&nbsp;4182</p>
+    <p><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 12l2 2 4-4"/><circle cx="12" cy="12" r="9"/></svg> Membre de l’Ordre des orthophonistes et audiologistes du Québec · #4182</p>
     <p><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2a7 7 0 00-7 7c0 5 7 13 7 13s7-8 7-13a7 7 0 00-7-7z"/><circle cx="12" cy="9" r="2.5"/></svg> Cinq points de service, de Québec à Rivière-du-Loup</p>
     <p><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg> Aucune référence médicale requise</p>
   </div>
 </div>
 
-<!-- ===== POURQUOI ÉVALUER ===== -->
-<section class="section">
-  <div class="wrap split">
-    <div class="reveal">
-      <span class="eyebrow">Pourquoi évaluer son audition</span>
-      <h2>Bien comprendre son audition, pour mieux en prendre soin</h2>
-      <p class="lead">L’audition joue un rôle essentiel dans la santé globale, les relations et la qualité de vie, à tout âge. Pourtant, il est difficile d’en prendre soin sans d’abord bien la connaître.</p>
-      <p>C’est là que j’interviens. En tant qu’audiologiste, je réalise une évaluation complète de votre audition ou de celle de votre enfant, puis je prends le temps de vous expliquer les résultats clairement, sans jargon. Vous repartez avec un portrait précis de votre santé auditive, votre rapport, et surtout la compréhension nécessaire pour faire des choix éclairés.</p>
-      <p>Parce qu’une personne bien informée est une personne motivée à agir&nbsp;: protéger son audition, améliorer sa communication, préserver sa participation sociale et son bien-être.</p>
-      <p><strong>Prenez rendez-vous dès aujourd’hui. Ensemble, nous ferons le point sur votre audition.</strong></p>
-      <div style="margin-top:1.4rem"><a href="lieux.html" class="btn btn--primary">Prendre rendez-vous →</a></div>
-    </div>
-    <div class="split-media reveal">
-      <div class="media-frame" style="aspect-ratio:3/4;max-width:420px;justify-self:center">
-        <img src="assets/portrait-assise.jpg" alt="Roxanne Bolduc, audiologiste, assise et souriante" style="width:100%;height:100%;object-fit:cover">
-      </div>
-    </div>
-  </div>
-</section>
-
 <!-- ===== SERVICES ===== -->
-<section class="section" style="background:var(--paper-2);border-top:1px solid var(--line);border-bottom:1px solid var(--line)">
+<section class="section">
   <div class="wrap">
     <div class="center reveal" style="max-width:760px;margin:0 auto 2.8rem">
       <span class="eyebrow">Services d’évaluation</span>
@@ -181,12 +102,23 @@
   </div>
 </section>
 
+<!-- ===== POURQUOI ÉVALUER (éditorial) ===== -->
+<section class="section" style="background:var(--paper-2);border-top:1px solid var(--line);border-bottom:1px solid var(--line)">
+  <div class="wrap center reveal" style="max-width:760px">
+    <span class="eyebrow">Pourquoi évaluer son audition</span>
+    <h2>Bien comprendre son audition, pour mieux en prendre soin</h2>
+    <p class="lead" style="margin:1.2rem auto 0">L’audition joue un rôle essentiel dans la santé globale, les relations et la qualité de vie, à tout âge. Je réalise une évaluation complète de votre audition ou de celle de votre enfant, puis je prends le temps de vous expliquer les résultats clairement, sans jargon&nbsp;: vous repartez avec un portrait précis de votre santé auditive, votre rapport, et la compréhension nécessaire pour faire des choix éclairés.</p>
+    <p style="font-family:var(--serif);font-style:italic;font-size:clamp(1.35rem, 1.1rem + 1.2vw, 1.8rem);line-height:1.35;color:var(--azure-deep);max-width:26ch;margin:2.2rem auto">Une personne bien informée est une personne motivée à agir.</p>
+    <a href="lieux.html" class="btn btn--primary">Prendre rendez-vous →</a>
+  </div>
+</section>
+
 <!-- ===== INDÉPENDANCE ===== -->
 <section class="section">
   <div class="wrap split">
     <div class="reveal">
       <span class="eyebrow">La pratique</span>
-      <h2>Indépendante, par choix.</h2>
+      <h2>Indépendante.</h2>
       <p class="lead">Mon rôle est d’évaluer votre audition et vos besoins, puis de vous en présenter un portrait juste, avec des options claires.</p>
       <p>Au Québec, l’audiologiste ne vend pas d’appareils&nbsp;: c’est réservé aux audioprothésistes. Mes recommandations reposent donc uniquement sur vos besoins.</p>
       <ul>
@@ -318,7 +250,7 @@
           <img src="assets/logo-empile-creme.svg" alt="Roxanne Bolduc, audiologiste" style="width:150px">
         </a>
         <p class="about">Audiologiste indépendante. Services d’évaluation en audiologie pour adultes et enfants dans la Capitale-Nationale, Chaudière-Appalaches et le Bas-Saint-Laurent.</p>
-        <p class="about">Membre de l’Ordre des orthophonistes et audiologistes du Québec (OOAQ) · n<sup>o</sup>&nbsp;4182</p>
+        <p class="about">Membre de l’Ordre des orthophonistes et audiologistes du Québec (OOAQ) · #4182</p>
       </div>
       <div>
         <h4>Navigation</h4>
