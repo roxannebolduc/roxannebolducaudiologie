@@ -412,6 +412,20 @@ svg .plot-line.l{stroke:var(--azure)}
 }
 .car-count{text-align:center;font-size:.82rem;color:var(--muted);margin-top:.6rem}
 
+/* ---------- Pictogramme 100 points (article acouphènes) ---------- */
+.waffle{
+  display:flex;gap:clamp(1.4rem,4vw,2.4rem);align-items:center;flex-wrap:wrap;
+  background:var(--card);border:1px solid var(--line);border-radius:var(--radius);
+  padding:1.6rem 1.8rem;margin:2.2rem 0;font-family:var(--body);
+}
+.waffle .wt{flex-basis:100%;font-family:var(--display);font-weight:600;font-size:1.05rem;color:var(--ink);margin:0 0 .2rem}
+.waffle svg{flex:none;width:min(230px,100%)}
+.waffle figcaption{display:flex;flex-direction:column;gap:.9rem;min-width:210px;flex:1}
+.waffle .wl{display:flex;gap:.7rem;align-items:flex-start;font-size:.92rem;line-height:1.35}
+.waffle .wl i{width:14px;height:14px;border-radius:50%;flex:none;margin-top:2px}
+.waffle .wl b{display:block;font-weight:600;color:var(--ink)}
+.waffle .wl span{color:var(--muted)}
+
 /* Bouton à l'intérieur d'un article (le lien d'article ne doit pas recolorer le bouton) */
 .article-body a.btn{color:#fff;text-decoration:none}
 .article-body a.btn:hover{color:#fff}
