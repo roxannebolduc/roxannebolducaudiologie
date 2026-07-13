@@ -180,7 +180,8 @@ p{margin:0 0 1rem}
 @media (max-width:860px){.hero-grid{grid-template-columns:1fr}.hero-audiogram{max-width:480px}}
 
 /* ---------- Portrait du héro (arche + mini audiogramme) ---------- */
-.hero-portrait{position:relative;justify-self:end;width:min(420px,100%)}
+.hero-grid > *{min-width:0}
+.hero-portrait{position:relative;justify-self:end;width:min(420px,100%);max-width:100%}
 .portrait-arch{
   border-radius:var(--radius-lg);
   overflow:hidden;border:1px solid var(--line);box-shadow:var(--shadow-lg);
@@ -378,10 +379,9 @@ svg .plot-line.l{stroke:var(--azure)}
 .refs ol{margin:0;padding-left:1.3rem;display:grid;gap:.65rem}
 .refs li{font-size:.88rem;color:var(--muted);line-height:1.55}
 
-/* Surtitre du héro sur une seule ligne, réduit sur petit écran */
-@media (max-width:640px){
-  .hero .eyebrow{font-size:.6rem;letter-spacing:.08em}
-  .hero .eyebrow::before{display:none}
+/* Surtitre du héro : une seule ligne sur grand écran, retour à la ligne permis sur mobile */
+@media (max-width:760px){
+  .hero .eyebrow{white-space:normal !important;font-size:.7rem;letter-spacing:.1em}
 }
 
 /* ---------- Vignette verticale (blogue) ---------- */
