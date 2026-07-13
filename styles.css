@@ -328,6 +328,8 @@ svg .plot-line.l{stroke:var(--azure)}
 .place .tel:hover{color:var(--azure-deep)}
 .place .itineraire{display:inline-block;margin-left:1rem;font-size:.8rem;font-weight:600;color:var(--coral-deep)}
 .place .itineraire:hover{text-decoration:underline;text-underline-offset:3px}
+.place .courriel{display:block;font-size:.88rem;font-weight:500;color:var(--ink-soft);margin-top:.25rem}
+.place .courriel:hover{color:var(--azure)}
 
 /* ---------- Blogue ---------- */
 .blog-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.4rem}
