@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="fr-CA">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Acheter ARA · Abonnement | Automatisation de Rapport Audiologique</title>
+<meta name="description" content="Essayez ARA gratuitement (audiogramme interactif, sauvegarde, impression) ou abonnez-vous pour la génération de rapports. Abonnement mensuel ou annuel par siège, activation sur 3 postes, annulation en tout temps. Paiement sécurisé par Stripe.">
+<link rel="icon" type="image/png" href="assets/logos/favicon-rb-creme.png">
+<link rel="apple-touch-icon" href="assets/logos/apple-touch-rb-creme.png">
+<link rel="stylesheet" href="styles.css">
+<!-- ============================================================
+     LISTE DE CONTRÔLE AVANT MISE EN LIGNE DE CETTE PAGE
+     ============================================================
+     1. Créer le compte Stripe avec le courriel conjoint
+        (audiologie.rb@gmail.com), en dollars canadiens (CAD).
+     2. Dans Stripe, créer le produit « ARA — abonnement (1 siège) »
+        avec deux tarifs récurrents : mensuel et annuel.
+        Confirmer les PRIX RÉELS — les montants affichés ci-dessous
+        (49 $/mois, 490 $/an) sont des ESPACES RÉSERVÉS à valider.
+     3. Activer Stripe Tax (TPS/TVQ) sur les deux tarifs.
+     4. Créer deux « Payment Links » (un par tarif) avec :
+        - quantité ajustable (pour les cliniques à plusieurs sièges);
+        - collecte de l'adresse de facturation;
+        - case d'acceptation des conditions (lien vers le CLUF publié).
+     5. Coller les deux URL dans ARA_CONFIG au bas de cette page.
+        Les boutons d'achat s'activent automatiquement.
+     6. Publier le CLUF en HTML (version révisée par l'avocat —
+        contrat_licence_ara.md est encore un BROUILLON v0.5) et
+        activer les liens vers le contrat ci-dessous.
+     7. Publier ara-confidentialite.html et activer son lien.
+     8. Activer le lien « Acheter ARA » sur ara.html.
+     9. Prévoir le processus d'émission des clés Keygen (compte
+        conjoint audiologie.rb@gmail.com) après chaque paiement.
+     ============================================================ -->
+</head>
+<body>
+
+<header class="site-header">
+  <div class="wrap nav">
+    <a class="brand" href="ara.html" aria-label="ARA, Automatisation de Rapport Audiologique">
+      <img src="assets/logos/plume-ara.png" alt="" aria-hidden="true" style="height:30px;width:auto;transform:rotate(8deg)">
+      <span style="font-family:var(--display);font-weight:700;font-size:1.3rem;letter-spacing:-.01em;color:var(--ink)">ARA</span>
+    </a>
+    <a href="ara.html" style="font-size:.93rem;font-weight:500;color:var(--ink-soft)">← Retour à la page ARA</a>
+  </div>
+</header>
+
+<!-- ===== Héros ===== -->
+<section class="section dark ara-hero" style="padding:clamp(2.8rem,6vw,4.4rem) 0">
+  <div class="wrap center" style="position:relative;z-index:2">
+    <div><span class="eyebrow">Abonnement</span></div>
+    <h1 style="max-width:22ch;margin:0 auto .9rem">Acheter ARA</h1>
+    <p class="lead" style="margin:0 auto;max-width:54ch;color:#b6c2cc">Commencez gratuitement avec l’audiogramme. Passez à l’abonnement, mensuel ou annuel, pour la génération de rapports — annulable en tout temps.</p>
+  </div>
+</section>
+
+<!-- ===== Tarifs ===== -->
+<section class="section" id="tarifs" style="padding-top:clamp(2.4rem,5vw,3.6rem)">
+  <div class="wrap" style="max-width:1020px">
+
+    <div class="price-grid">
+
+    <div class="price-card free reveal">
+      <p class="plan-name">ARA — niveau gratuit</p>
+      <p class="plan-sub">Pour saisir et conserver vos audiogrammes</p>
+
+      <div class="price-line">
+        <span class="price-amount">0&nbsp;$</span>
+        <span class="price-period">pour toujours</span>
+      </div>
+      <p class="price-note">Aucune clé de licence, aucune carte de crédit.</p>
+
+      <ul>
+        <li><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 13l4 4L19 7"/></svg>Audiogramme interactif&nbsp;: saisie des seuils et calculs en temps réel</li>
+        <li><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 13l4 4L19 7"/></svg>Sauvegarde des audiogrammes sur votre poste</li>
+        <li><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 13l4 4L19 7"/></svg>Impression de l’audiogramme</li>
+        <li><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 13l4 4L19 7"/></svg>Données 100&nbsp;% locales</li>
+      </ul>
+
+      <div style="margin-top:auto">
+        <!-- Au lancement, remplacer par le lien de téléchargement :
+        <a class="btn btn--ghost" href="URL_DE_TELECHARGEMENT">Télécharger ARA</a>
+        -->
+        <a class="btn btn--ghost btn--disabled" aria-disabled="true">Téléchargement bientôt disponible</a>
+      </div>
+      <p class="fineprint">L’utilisation des fonctions gratuites demeure régie par le contrat de licence (CLUF) d’ARA.</p>
+    </div>
+
+    <div class="price-card reveal">
+      <span class="plan-badge">Complet</span>
+      <p class="plan-name">ARA — abonnement complet</p>
+      <p class="plan-sub">Par siège (1&nbsp;audiologiste), activable sur 3&nbsp;postes</p>
+
+      <div class="billing-toggle" role="group" aria-label="Fréquence de facturation" style="align-self:flex-start;margin-bottom:1.2rem">
+        <button type="button" data-billing="mensuel" class="active" aria-pressed="true">Mensuel</button>
+        <button type="button" data-billing="annuel" aria-pressed="false">Annuel <span class="save">2&nbsp;mois gratuits</span></button>
+      </div>
+
+      <!-- PRIX À CONFIRMER : espaces réservés (voir liste de contrôle en tête de fichier) -->
+      <div class="price-line" data-panel-billing="mensuel">
+        <span class="price-amount">49&nbsp;$</span>
+        <span class="price-period">/&nbsp;mois par siège</span>
+      </div>
+      <div class="price-line" data-panel-billing="annuel" hidden>
+        <span class="price-amount">490&nbsp;$</span>
+        <span class="price-period">/&nbsp;an par siège</span>
+      </div>
+      <p class="price-note" data-panel-billing="annuel" hidden>Soit l’équivalent d’environ 41&nbsp;$ par mois — deux mois gratuits par rapport au tarif mensuel.</p>
+      <p class="price-note">Prix en dollars canadiens, taxes en sus.</p>
+
+      <ul>
+        <li style="font-weight:600;color:var(--ink)">Tout le niveau gratuit, plus&nbsp;:</li>
+        <li><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 13l4 4L19 7"/></svg>Génération de rapports&nbsp;: section des résultats rédigée automatiquement, conclusion suggérée, formulaires CNESST et ASA, envoi par courriel</li>
+        <li><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 13l4 4L19 7"/></svg>Activation sur un maximum de 3&nbsp;postes par siège</li>
+        <li><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 13l4 4L19 7"/></svg>Toutes les mises à jour et mises à niveau incluses</li>
+        <li><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 13l4 4L19 7"/></svg>Soutien technique par courriel</li>
+        <li><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 13l4 4L19 7"/></svg>Annulation en tout temps, effective à la fin de la période en cours</li>
+      </ul>
+
+      <div style="display:flex;flex-wrap:wrap;gap:.8rem;align-items:center">
+        <a id="btn-acheter" class="btn btn--coral" href="#" rel="noopener">S’abonner — paiement sécurisé par Stripe</a>
+        <a class="btn btn--ghost" href="mailto:audiologie.rb@gmail.com?subject=Question%20avant%20achat%20%E2%80%94%20ARA">Une question avant d’acheter&nbsp;?</a>
+      </div>
+
+      <p class="fineprint">Paiement par carte de crédit, Apple&nbsp;Pay ou Google&nbsp;Pay, traité par <a href="https://stripe.com/fr-ca" style="text-decoration:underline;text-underline-offset:3px" rel="noopener">Stripe</a>&nbsp;; nous ne conservons aucun numéro de carte. Vous choisissez le nombre de sièges directement sur la page de paiement. En vous abonnant, vous acceptez le contrat de licence d’utilisateur final (CLUF) d’ARA.
+      <!-- À activer quand le CLUF révisé sera publié en HTML :
+      <a href="ara-licence.html">Lire le contrat de licence</a> ·
+      <a href="ara-confidentialite.html">Politique de confidentialité du logiciel ARA</a>
+      --></p>
+    </div>
+
+    </div><!-- /.price-grid -->
+
+  </div>
+</section>
+
+<!-- ===== Comment ça fonctionne ===== -->
+<section class="section" style="padding-top:0">
+  <div class="wrap">
+    <div class="center reveal" style="max-width:680px;margin:0 auto 2.4rem">
+      <span class="eyebrow">Après le paiement</span>
+      <h2>De l’achat au premier rapport, en trois étapes.</h2>
+    </div>
+    <div class="grid-3">
+      <article class="scard reveal">
+        <span class="num">01</span>
+        <div class="ic"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="2" y="5" width="20" height="14" rx="2"/><path d="M2 10h20"/></svg></div>
+        <h3>Payez en ligne</h3>
+        <p>Choisissez la formule mensuelle ou annuelle et le nombre de sièges, puis réglez sur la page de paiement sécurisée de Stripe. Vous recevez aussitôt votre reçu par courriel.</p>
+      </article>
+      <article class="scard coral reveal">
+        <span class="num">02</span>
+        <div class="ic"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M21 8V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2h14a2 2 0 002-2v-1"/><path d="M3 7l9 6 9-6"/></svg></div>
+        <h3>Recevez votre clé</h3>
+        <p>Votre clé de licence vous est transmise par courriel à l’adresse utilisée lors du paiement, au plus tard le jour ouvrable suivant. Une clé distincte est émise pour chaque siège.</p>
+      </article>
+      <article class="scard reveal">
+        <span class="num">03</span>
+        <div class="ic"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M13 2L3 14h7l-1 8 10-12h-7z"/></svg></div>
+        <h3>Activez et rédigez</h3>
+        <p>Entrez la clé dans ARA sur vos postes (jusqu’à trois par siège). Les fonctions sous licence se déverrouillent immédiatement&nbsp;: audiogramme, calculs, génération de rapports.</p>
+      </article>
+    </div>
+
+    <div class="region-cta reveal" style="margin-top:2.4rem">
+      <div>
+        <h3 style="margin-bottom:.4rem">Une clinique, plusieurs audiologistes&nbsp;?</h3>
+        <p class="muted" style="margin:0;max-width:58ch">Ajoutez simplement le nombre de sièges voulu au moment du paiement&nbsp;: chaque siège correspond à un utilisateur autorisé. Pour un déploiement particulier ou une facturation regroupée, écrivez-nous.</p>
+      </div>
+      <a class="btn btn--primary" href="mailto:audiologie.rb@gmail.com?subject=ARA%20%E2%80%94%20licences%20pour%20clinique">Nous écrire <span class="arw">→</span></a>
+    </div>
+  </div>
+</section>
+
+<!-- ===== FAQ ===== -->
+<section class="section" style="padding-top:0" id="faq">
+  <div class="wrap" style="max-width:780px">
+    <div class="center reveal" style="margin-bottom:2.2rem">
+      <span class="eyebrow">Questions fréquentes</span>
+      <h2>Avant de vous abonner.</h2>
+    </div>
+
+    <details class="faq-item reveal">
+      <summary>Puis-je annuler mon abonnement en tout temps&nbsp;?</summary>
+      <div class="faq-body"><p>Oui. Il suffit d’un courriel au soutien technique. L’annulation prend effet à la fin de la période déjà payée&nbsp;: vous conservez l’accès aux fonctions sous licence jusqu’à cette date, et aucun frais n’est exigé ensuite. Les sommes déjà payées ne sont pas remboursables.</p></div>
+    </details>
+
+    <details class="faq-item reveal">
+      <summary>Sur combien d’ordinateurs puis-je utiliser un siège&nbsp;?</summary>
+      <div class="faq-body"><p>Chaque siège est réservé à un utilisateur autorisé et peut être activé sur un maximum de trois postes (par exemple&nbsp;: l’ordinateur de la clinique, le portable et un poste à domicile).</p></div>
+    </details>
+
+    <details class="faq-item reveal">
+      <summary>Mes données de patients transitent-elles par vos serveurs&nbsp;?</summary>
+      <div class="faq-body"><p>Non. ARA enregistre toutes vos données localement, sur vos propres postes. La validation périodique de la licence ne transmet que la clé de licence et une empreinte technique anonymisée du poste — jamais de données de patients.</p></div>
+    </details>
+
+    <details class="faq-item reveal">
+      <summary>ARA fonctionne-t-il sans connexion Internet&nbsp;?</summary>
+      <div class="faq-body"><p>Oui. Chaque validation réussie de la licence accorde une période d’utilisation hors ligne&nbsp;; il suffit que le poste puisse joindre le serveur de licences de temps à autre. Toutes les fonctions, y compris la génération de rapports, s’exécutent entièrement sur votre poste.</p></div>
+    </details>
+
+    <details class="faq-item reveal">
+      <summary>Les mises à jour sont-elles incluses&nbsp;?</summary>
+      <div class="faq-body"><p>Oui. Toutes les mises à jour et mises à niveau publiées pendant votre abonnement sont incluses, sans frais additionnels.</p></div>
+    </details>
+
+    <details class="faq-item reveal">
+      <summary>Que se passe-t-il si je mets fin à mon abonnement&nbsp;?</summary>
+      <div class="faq-body"><p>Vous repassez simplement au niveau gratuit à la fin de la période payée&nbsp;: la génération de rapports se désactive, mais vous conservez l’accès à vos données ainsi qu’à la saisie, à la sauvegarde et à l’impression d’audiogrammes. Rien n’est perdu.</p></div>
+    </details>
+
+    <details class="faq-item reveal">
+      <summary>Un employé quitte la clinique&nbsp;: puis-je réassigner son siège&nbsp;?</summary>
+      <div class="faq-body"><p>Oui. Écrivez au soutien technique pour réassigner un siège à un nouvel utilisateur autorisé (au plus une fois par période de trente jours par siège). Les postes de l’ancien utilisateur sont alors désactivés.</p></div>
+    </details>
+  </div>
+</section>
+
+<!-- ===== Usage prévu (avis réglementaire) ===== -->
+<section class="section" style="padding-top:0;padding-bottom:2.4rem">
+  <div class="wrap" style="max-width:760px">
+    <p class="muted" style="font-size:.9rem;line-height:1.6;text-align:center;margin:0">ARA est un outil de documentation et de rédaction de rapports destiné aux audiologistes. Il ne pose aucun diagnostic et ne remplace pas le jugement clinique. Toutes les conclusions cliniques sont révisées, approuvées et signées par l’audiologiste.</p>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="wrap" style="text-align:center">
+    <img src="assets/logos/plume-ara.png" alt="" aria-hidden="true" style="height:44px;width:auto;transform:rotate(8deg);margin-bottom:1rem">
+    <p style="color:#fff;font-family:var(--display);font-weight:600;font-size:1.05rem;margin-bottom:.4rem">ARA, Automatisation de Rapport Audiologique</p>
+    <p style="margin-bottom:1.2rem">Un logiciel conçu par une audiologiste, pour les audiologistes.</p>
+    <p style="margin-bottom:.4rem">Contact&nbsp;: Roxanne Bolduc, <a href="mailto:audiologie.rb@gmail.com">audiologie.rb@gmail.com</a></p>
+    <!-- À activer quand ara-confidentialite.html sera publiée (voir liste de contrôle dans ara-confidentialite.html et docs/site_web_loi25_ara.md) :
+    <p style="margin-bottom:.4rem"><a href="ara-confidentialite.html">Politique de confidentialité du logiciel ARA</a></p>
+    -->
+    <p style="margin:0">Site de la clinique&nbsp;: <a href="index.html">roxannebolducaudiologie.com</a></p>
+  </div>
+</footer>
+
+<script src="main.js"></script>
+<script>
+/* ===== Achat ARA : configuration et bascule mensuel/annuel ===== */
+(function () {
+  /* Coller ici les URL des Payment Links Stripe (voir la liste de
+     contrôle en tête de fichier). Tant qu'une URL est vide, le bouton
+     d'achat correspondant reste désactivé. */
+  var ARA_CONFIG = {
+    stripe: {
+      mensuel: '',   /* ex. : 'https://buy.stripe.com/xxxxxxxxxxxxxxx' */
+      annuel:  ''    /* ex. : 'https://buy.stripe.com/yyyyyyyyyyyyyyy' */
+    }
+  };
+
+  var buttons = document.querySelectorAll('.billing-toggle [data-billing]');
+  var panels = document.querySelectorAll('[data-panel-billing]');
+  var buy = document.getElementById('btn-acheter');
+  var buyLabel = 'S’abonner — paiement sécurisé par Stripe';
+
+  function activate(billing) {
+    buttons.forEach(function (b) {
+      var on = b.getAttribute('data-billing') === billing;
+      b.classList.toggle('active', on);
+      b.setAttribute('aria-pressed', on ? 'true' : 'false');
+    });
+    panels.forEach(function (p) {
+      p.hidden = p.getAttribute('data-panel-billing') !== billing;
+    });
+    var url = ARA_CONFIG.stripe[billing];
+    if (url) {
+      buy.href = url;
+      buy.textContent = buyLabel;
+      buy.classList.remove('btn--disabled');
+      buy.removeAttribute('aria-disabled');
+    } else {
+      buy.removeAttribute('href');
+      buy.textContent = 'Paiement en ligne bientôt disponible';
+      buy.classList.add('btn--disabled');
+      buy.setAttribute('aria-disabled', 'true');
+    }
+  }
+
+  buttons.forEach(function (b) {
+    b.addEventListener('click', function () {
+      activate(b.getAttribute('data-billing'));
+    });
+  });
+  activate('mensuel');
+})();
+</script>
+</body>
+</html>
