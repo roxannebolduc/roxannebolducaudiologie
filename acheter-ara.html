@@ -50,7 +50,7 @@
   <div class="wrap center" style="position:relative;z-index:2">
     <div><span class="eyebrow">Abonnement</span></div>
     <h1 style="max-width:22ch;margin:0 auto .9rem">Acheter ARA</h1>
-    <p class="lead" style="margin:0 auto;max-width:54ch;color:#b6c2cc">Commencez gratuitement avec l’audiogramme. Passez à l’abonnement, mensuel ou annuel, pour la génération de rapports — annulable en tout temps.</p>
+    <p class="lead" style="margin:0 auto;max-width:54ch;color:#b6c2cc">Commencez gratuitement avec l’audiogramme. Passez à l’abonnement, mensuel ou annuel, pour la génération de rapports, annulable en tout temps.</p>
   </div>
 </section>
 
@@ -61,7 +61,7 @@
     <div class="price-grid">
 
     <div class="price-card free reveal">
-      <p class="plan-name">ARA — niveau gratuit</p>
+      <p class="plan-name">ARA, niveau gratuit</p>
       <p class="plan-sub">Pour saisir et conserver vos audiogrammes</p>
 
       <div class="price-line">
@@ -88,7 +88,7 @@
 
     <div class="price-card reveal">
       <span class="plan-badge">Complet</span>
-      <p class="plan-name">ARA — abonnement complet</p>
+      <p class="plan-name">ARA, abonnement complet</p>
       <p class="plan-sub">Par siège (1&nbsp;audiologiste), activable sur 3&nbsp;postes</p>
 
       <div class="billing-toggle" role="group" aria-label="Fréquence de facturation" style="align-self:flex-start;margin-bottom:1.2rem">
@@ -105,7 +105,7 @@
         <span class="price-amount">890&nbsp;$</span>
         <span class="price-period">/&nbsp;an par siège</span>
       </div>
-      <p class="price-note" data-panel-billing="annuel" hidden>Soit l’équivalent d’environ 74&nbsp;$ par mois — deux mois gratuits par rapport au tarif mensuel.</p>
+      <p class="price-note" data-panel-billing="annuel" hidden>Soit l’équivalent d’environ 74&nbsp;$ par mois, deux mois gratuits par rapport au tarif mensuel.</p>
       <p class="price-note">Prix en dollars canadiens, taxes en sus.</p>
 
       <ul>
@@ -118,15 +118,11 @@
       </ul>
 
       <div style="display:flex;flex-wrap:wrap;gap:.8rem;align-items:center">
-        <a id="btn-acheter" class="btn btn--coral" href="#" rel="noopener">S’abonner — paiement sécurisé par Stripe</a>
+        <a id="btn-acheter" class="btn btn--coral" href="#" rel="noopener">S’abonner (paiement sécurisé par Stripe)</a>
         <a class="btn btn--ghost" href="mailto:audiologie.rb@gmail.com?subject=Question%20avant%20achat%20%E2%80%94%20ARA">Une question avant d’acheter&nbsp;?</a>
       </div>
 
-      <p class="fineprint">Paiement par carte de crédit, Apple&nbsp;Pay ou Google&nbsp;Pay, traité par <a href="https://stripe.com/fr-ca" style="text-decoration:underline;text-underline-offset:3px" rel="noopener">Stripe</a>&nbsp;; nous ne conservons aucun numéro de carte. Vous choisissez le nombre de sièges directement sur la page de paiement. En vous abonnant, vous acceptez le contrat de licence d’utilisateur final (CLUF) d’ARA.
-      <!-- À activer quand le CLUF révisé sera publié en HTML :
-      <a href="ara-licence.html">Lire le contrat de licence</a> ·
-      <a href="ara-confidentialite.html">Politique de confidentialité du logiciel ARA</a>
-      --></p>
+      <p class="fineprint">Paiement par carte de crédit, Apple&nbsp;Pay ou Google&nbsp;Pay, traité par <a href="https://stripe.com/fr-ca" style="text-decoration:underline;text-underline-offset:3px" rel="noopener">Stripe</a>.</p>
     </div>
 
     </div><!-- /.price-grid -->
@@ -192,7 +188,7 @@
 
     <details class="faq-item reveal">
       <summary>Mes données de patients transitent-elles par vos serveurs&nbsp;?</summary>
-      <div class="faq-body"><p>Non. ARA enregistre toutes vos données localement, sur vos propres postes. La validation périodique de la licence ne transmet que la clé de licence et une empreinte technique anonymisée du poste — jamais de données de patients.</p></div>
+      <div class="faq-body"><p>Non. ARA enregistre toutes vos données localement, sur vos propres postes. La validation périodique de la licence ne transmet que la clé de licence et une empreinte technique anonymisée du poste, jamais de données de patients.</p></div>
     </details>
 
     <details class="faq-item reveal">
@@ -254,7 +250,7 @@
   var buttons = document.querySelectorAll('.billing-toggle [data-billing]');
   var panels = document.querySelectorAll('[data-panel-billing]');
   var buy = document.getElementById('btn-acheter');
-  var buyLabel = 'S’abonner — paiement sécurisé par Stripe';
+  var buyLabel = 'S’abonner (paiement sécurisé par Stripe)';
 
   function activate(billing) {
     buttons.forEach(function (b) {
