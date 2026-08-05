@@ -238,6 +238,11 @@
      contrôle en tête de fichier). Tant qu'une URL est vide, le bouton
      d'achat correspondant reste désactivé. */
   var ARA_CONFIG = {
+    /* Passer enVente à true au lancement : les boutons d'achat s'activent.
+       Tant que false, le bouton affiche « bientôt disponible » (installateurs
+       macOS/Surface pas encore publiés — on ne peut pas livrer sur tous les
+       systèmes). */
+    enVente: false,
     stripe: {
       mensuel: 'https://buy.stripe.com/7sY7sN2tuao84uh4iw2Ji00',
       annuel:  'https://buy.stripe.com/00w4gB2tugMw1i5g1e2Ji01',
@@ -259,7 +264,7 @@
     panels.forEach(function (p) {
       p.hidden = p.getAttribute('data-panel-billing') !== billing;
     });
-    var url = ARA_CONFIG.stripe[billing];
+    var url = ARA_CONFIG.enVente ? ARA_CONFIG.stripe[billing] : '';
     if (url) {
       buy.href = url;
       buy.textContent = buyLabel;
