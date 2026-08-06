@@ -1,20 +1,16 @@
 # Contrat de licence d'utilisateur final (CLUF) — Logiciel ARA
 
-> **VERSION 0.5 — BROUILLON — à faire réviser par un avocat avant toute utilisation.**
+> **VERSION 0.6 — BROUILLON — à faire réviser par un avocat avant toute utilisation.**
 > Les mentions entre crochets `[…]` restantes sont des informations à compléter après
 > l'incorporation (dénomination, adresses) ou des points signalés pour l'avocat.
 >
 > Architecture confirmée : toutes les Données du Licencié demeurent locales; la génération
 > de rapports s'effectue entièrement sur le Poste. L'envoi par courriel s'effectue via
 > l'application de courriel du Licencié (article 7.4). Tous les choix d'affaires ont été
-> tranchés.
->
-> **Note interne (à retirer avant publication) :** le contrat décrit un bail hors ligne de
-> sept (7) jours; le code implémente actuellement trente (30) jours
-> (`LEASE_TTL_SECS`, `src/licensing.rs`). Aligner le code sur le contrat avant le
-> lancement du modèle mensuel.
+> tranchés. Le bail hors ligne est de trente (30) jours, aligné sur le code
+> (`LEASE_TTL_SECS`, `src/licensing.rs`).
 
-**Version :** 0.5 (brouillon)
+**Version :** 0.6 (brouillon)
 **Date d'entrée en vigueur :** [date]
 
 ---
@@ -68,7 +64,10 @@ valide, notamment la génération de rapports.
 licence activée.
 
 **« Abonnement »** : le droit d'utiliser les Fonctions sous licence pour le nombre de
-Sièges souscrits, pendant chaque période mensuelle payée, tel que décrit à l'article 4.
+Sièges souscrits, pendant chaque Période d'abonnement payée, tel que décrit à l'article 4.
+
+**« Période d'abonnement »** : la période mensuelle ou annuelle, selon la formule choisie
+à la Commande, pour laquelle les frais d'Abonnement sont payés d'avance.
 
 **« Données du Licencié »** : toutes les données saisies, importées ou générées par le
 Licencié ou ses Utilisateurs autorisés au moyen du Logiciel, y compris les renseignements
@@ -146,25 +145,37 @@ l'ordre professionnel dont le Licencié ou l'Utilisateur autorisé est membre.
 
 ## 4. Abonnement, frais, activation et validation
 
-4.1 **Abonnement mensuel à renouvellement automatique.** L'accès aux Fonctions sous licence
-est offert par Abonnement mensuel, par Siège. L'Abonnement se **renouvelle automatiquement**
-à la fin de chaque période mensuelle, jusqu'à son annulation conformément à l'article 4.3.
+4.1 **Abonnement à renouvellement automatique.** L'accès aux Fonctions sous licence est
+offert par Abonnement, par Siège, selon la formule mensuelle ou annuelle choisie à la
+Commande. L'Abonnement se **renouvelle automatiquement** à la fin de chaque Période
+d'abonnement, pour une période de même durée, jusqu'à son annulation conformément à
+l'article 4.3.
 
 4.2 **Frais et taxes.** Les frais d'Abonnement par Siège sont ceux indiqués à la Commande
 (tels qu'affichés sur la page d'achat au moment de la souscription et confirmés dans la
-confirmation de Commande). Ils sont payables mensuellement et d'avance, **plus les taxes de
-vente applicables, le cas échéant**. Le Concédant peut modifier les frais d'Abonnement
-moyennant un préavis d'au moins **trente (30) jours** transmis au Licencié; le nouveau tarif
-s'applique à compter du renouvellement mensuel suivant l'expiration du préavis, et le
-Licencié peut annuler son Abonnement avant cette date s'il refuse le nouveau tarif.
+confirmation de Commande). Ils sont payables d'avance, au début de chaque Période
+d'abonnement, **plus les taxes de vente applicables, le cas échéant**. Le Concédant peut
+modifier les frais d'Abonnement moyennant un préavis d'au moins **trente (30) jours**
+transmis au Licencié; le nouveau tarif s'applique à compter du renouvellement suivant
+l'expiration du préavis, et le Licencié peut annuler son Abonnement avant cette date s'il
+refuse le nouveau tarif.
 
-4.3 **Annulation en tout temps.** Le Licencié peut annuler son Abonnement (ou réduire son
-nombre de Sièges) en tout temps par avis écrit transmis au soutien technique
-(article 8.2). L'annulation prend effet **à la fin de la période mensuelle en cours** du ou
-des Sièges visés : les Fonctions sous licence demeurent accessibles jusqu'à cette date et
-aucun frais n'est exigé pour les périodes subséquentes. Les frais déjà payés ne sont pas
-remboursables, en tout ou en partie. L'ajout d'un Siège en cours d'Abonnement crée une
-nouvelle période mensuelle propre à ce Siège, débutant à la date de son activation.
+4.3 **Annulation en tout temps.** Le Licencié peut annuler son Abonnement en tout temps :
+
+a) **directement en ligne**, au moyen du portail client sécurisé de Stripe, accessible par
+le lien fourni sur la page d'achat et dans les communications de facturation; ou
+
+b) par avis écrit transmis au soutien technique (article 8.2), qui traite également les
+demandes de réduction du nombre de Sièges.
+
+L'annulation prend effet **à la fin de la Période d'abonnement en cours** du ou des Sièges
+visés : les Fonctions sous licence demeurent accessibles jusqu'à cette date et aucun frais
+n'est exigé pour les périodes subséquentes. Les frais déjà payés ne sont pas remboursables,
+en tout ou en partie; en particulier, l'annulation d'un Abonnement annuel en cours d'année
+ne donne droit à aucun remboursement pour les mois restants, l'accès aux Fonctions sous
+licence demeurant toutefois maintenu jusqu'à la fin de l'année déjà payée. L'ajout d'un
+Siège en cours d'Abonnement crée une nouvelle Période d'abonnement propre à ce Siège,
+débutant à la date de son activation.
 
 4.4 **Expiration et non-paiement.** En cas d'échec ou de défaut de paiement non corrigé
 dans les **dix (10) jours** d'un avis, le Concédant peut suspendre ou désactiver les Clés de
@@ -184,11 +195,11 @@ aucune donnée de patient — n'est transmise au serveur de licences lors de ces
 validations.**
 
 4.6 **Fonctionnement hors ligne.** Chaque validation réussie accorde au Poste un droit
-d'utilisation hors ligne de **sept (7) jours**. Les Fonctions sous licence demeurent donc
-pleinement fonctionnelles sans connexion Internet pendant les sept (7) jours suivant la
+d'utilisation hors ligne de **trente (30) jours**. Les Fonctions sous licence demeurent donc
+pleinement fonctionnelles sans connexion Internet pendant les trente (30) jours suivant la
 dernière validation réussie; au-delà, une reconnexion au serveur de licences est nécessaire
 pour les réactiver. En pratique, chaque Poste doit ainsi pouvoir joindre le serveur de
-licences au moins une fois par semaine. Le Licencié reconnaît que le fonctionnement des
+licences au moins une fois par mois. Le Licencié reconnaît que le fonctionnement des
 Fonctions sous licence dépend de la disponibilité du serveur de licences; le Concédant
 déploie des efforts raisonnables pour en assurer la disponibilité mais ne la garantit pas.
 
@@ -262,7 +273,7 @@ facturation, le Concédant recueille et conserve les renseignements suivants : n
 coordonnées du Licencié, noms et adresses courriel des Utilisateurs autorisés, Clés de
 licence, identifiants de machine hachés et historique d'activation. Les renseignements de
 paiement sont recueillis et traités par le fournisseur de traitement de paiement du
-Concédant [Stripe / autre — préciser]; le Concédant ne conserve pas les numéros de carte.
+Concédant, Stripe; le Concédant ne conserve pas les numéros de carte.
 Ces renseignements sont utilisés uniquement pour la délivrance, la validation, le soutien
 et la facturation des licences, et sont traités conformément à [la politique de
 confidentialité du Concédant — à rédiger / lien]. Le serveur de licences et le fournisseur
@@ -376,7 +387,7 @@ Concédant].
 
 12.2 **Modifications du Contrat.** Le Concédant peut modifier le présent Contrat moyennant
 un préavis d'au moins **trente (30) jours** transmis au Licencié (p. ex. par courriel ou
-dans le Logiciel). Les modifications prennent effet au renouvellement mensuel suivant
+dans le Logiciel). Les modifications prennent effet au renouvellement suivant
 l'expiration du préavis; le Licencié qui les refuse peut annuler son Abonnement avant cette
 date, conformément à l'article 4.3. La poursuite de l'utilisation après l'entrée en vigueur
 des modifications vaut acceptation.
