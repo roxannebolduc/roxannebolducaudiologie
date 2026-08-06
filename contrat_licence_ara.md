@@ -1,6 +1,9 @@
 # Contrat de licence d'utilisateur final (CLUF) — Logiciel ARA
 
-> **VERSION 0.6 — BROUILLON — à faire réviser par un avocat avant toute utilisation.**
+> **VERSION 0.6 — BROUILLON — à faire réviser par un avocat.**
+> **Publié le 2026-08-05** sous forme HTML (`cluf-ara.html`, version affichée 1.0) avant la
+> révision juridique, par décision d'affaires. Toute modification ici doit être reportée
+> dans `cluf-ara.html` (et inversement), en incrémentant la version affichée.
 > Les mentions entre crochets `[…]` restantes sont des informations à compléter après
 > l'incorporation (dénomination, adresses) ou des points signalés pour l'avocat.
 >
