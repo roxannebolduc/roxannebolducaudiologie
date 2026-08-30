@@ -61,6 +61,66 @@
   els.forEach(function (e) { io.observe(e); });
 })();
 
+/* Bannière de témoins (Loi 25) */
+(function () {
+  var KEY = 'rb-temoins';
+  var DUREE = 180 * 24 * 60 * 60 * 1000; /* le choix expire après 6 mois */
+
+  function lireChoix() {
+    try {
+      var d = JSON.parse(localStorage.getItem(KEY));
+      if (d && d.choix && (Date.now() - d.date) < DUREE) return d.choix;
+    } catch (e) {}
+    return null;
+  }
+
+  function enregistrer(choix) {
+    try {
+      localStorage.setItem(KEY, JSON.stringify({ choix: choix, date: Date.now() }));
+    } catch (e) {}
+  }
+
+  function afficher() {
+    if (document.getElementById('cookie-banner')) return;
+    var b = document.createElement('div');
+    b.id = 'cookie-banner';
+    b.className = 'cookie-banner';
+    b.setAttribute('role', 'region');
+    b.setAttribute('aria-label', 'Consentement aux témoins (cookies)');
+    b.innerHTML =
+      '<h3>Témoins (cookies)</h3>' +
+      '<p>Ce site web conserve un seul témoin sur votre ordinateur : celui qui mémorise votre réponse ci-dessous. ' +
+      'Il ne collecte aucune information sur la manière dont vous interagissez avec le site et ne vous suit pas. ' +
+      'Pour en savoir plus, consultez notre <a href="confidentialite.html">Politique de confidentialité</a>.</p>' +
+      '<p>Si vous refusez, rien de plus n’est conservé : ce même témoin servira uniquement à se souvenir de votre préférence.</p>' +
+      '<div class="cookie-actions">' +
+      '<button type="button" class="btn btn--primary" data-consent="accepte">Accepter</button>' +
+      '<button type="button" class="btn btn--ghost" data-consent="refuse">Refuser</button>' +
+      '</div>';
+    document.body.appendChild(b);
+    requestAnimationFrame(function () { b.classList.add('show'); });
+    b.addEventListener('click', function (e) {
+      var btn = e.target.closest ? e.target.closest('[data-consent]') : null;
+      if (!btn) return;
+      enregistrer(btn.getAttribute('data-consent'));
+      b.classList.remove('show');
+      setTimeout(function () { if (b.parentNode) b.parentNode.removeChild(b); }, 500);
+    });
+  }
+
+  if (!lireChoix()) afficher();
+
+  /* Lien « gérer mes témoins » (page confidentialité) */
+  var gerer = document.getElementById('gerer-temoins');
+  if (gerer) {
+    gerer.addEventListener('click', function (e) {
+      e.preventDefault();
+      try { localStorage.removeItem(KEY); } catch (err) {}
+      afficher();
+    });
+  }
+})();
+
 /* Carrousel (guide pédiatrique) */
 (function () {
   var cars = document.querySelectorAll('[data-carousel]');
