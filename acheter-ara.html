@@ -69,7 +69,7 @@
         <span class="price-amount">0&nbsp;$</span>
         <span class="price-period">pour toujours</span>
       </div>
-      <p class="price-note">Aucune clé de licence, aucune carte de crédit.</p>
+      <p class="price-note">Aucune carte de crédit, ni maintenant ni plus tard. Clé de licence gratuite, sans date d’expiration.</p>
 
       <ul>
         <li><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 13l4 4L19 7"/></svg>Audiogramme interactif&nbsp;: saisie des seuils et calculs en temps réel</li>
@@ -78,12 +78,13 @@
         <li><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 13l4 4L19 7"/></svg>Données 100&nbsp;% locales</li>
       </ul>
 
-      <div style="margin-top:auto">
+      <div style="margin-top:auto;display:flex;flex-wrap:wrap;gap:.8rem;align-items:center">
         <!-- Au lancement, réactiver le lien (l'URL « latest » pointe toujours
              vers la dernière release GitHub) :
         <a class="btn btn--ghost" href="https://github.com/roxannebolduc/roxannebolducaudiologie/releases/latest/download/ARA-Setup.exe">Télécharger ARA (Windows)</a>
         -->
         <a class="btn btn--ghost btn--disabled" aria-disabled="true">Téléchargement bientôt disponible</a>
+        <a id="btn-gratuit" class="btn btn--ghost" href="#" rel="noopener">Obtenir la licence gratuite</a>
       </div>
       <p class="fineprint">L’utilisation des fonctions gratuites demeure régie par le <a href="cluf-ara.html" style="text-decoration:underline;text-underline-offset:3px">contrat de licence (CLUF) d’ARA</a>.</p>
     </div>
@@ -121,8 +122,11 @@
 
       <div style="display:flex;flex-wrap:wrap;gap:.8rem;align-items:center">
         <a id="btn-acheter" class="btn btn--coral" href="#" rel="noopener">S’abonner (paiement sécurisé par Stripe)</a>
+        <a id="btn-essai" class="btn btn--ghost" href="#" rel="noopener">Essayer 14&nbsp;jours, sans carte</a>
         <a class="btn btn--ghost" href="mailto:audiologie.rb@gmail.com?subject=Question%20avant%20achat%20%E2%80%94%20ARA">Une question avant d’acheter&nbsp;?</a>
       </div>
+
+      <p class="fineprint">L’essai de 14&nbsp;jours donne accès à toutes les fonctions sans carte de crédit&nbsp;: à son terme, sans abonnement de votre part, ARA repasse simplement au niveau gratuit et rien ne vous est facturé.</p>
 
       <p class="fineprint">Paiement par carte de crédit, Apple&nbsp;Pay ou Google&nbsp;Pay, traité par <a href="https://stripe.com/fr-ca" style="text-decoration:underline;text-underline-offset:3px" rel="noopener">Stripe</a>. En vous abonnant, vous acceptez le <a href="cluf-ara.html" style="text-decoration:underline;text-underline-offset:3px">contrat de licence (CLUF) d’ARA</a>.</p>
     </div>
@@ -177,6 +181,11 @@
       <span class="eyebrow">Questions fréquentes</span>
       <h2>Avant de vous abonner.</h2>
     </div>
+
+    <details class="faq-item reveal">
+      <summary>L’essai de 14&nbsp;jours exige-t-il une carte de crédit&nbsp;?</summary>
+      <div class="faq-body"><p>Non. L’essai déverrouille toutes les fonctions d’ARA, y compris la génération de rapports, pendant 14&nbsp;jours, sans qu’aucune carte ne vous soit demandée. Au terme des 14&nbsp;jours, si vous n’avez pas choisi de vous abonner, l’essai prend fin de lui-même et ARA repasse au niveau gratuit&nbsp;: vous conservez vos données, la saisie, la sauvegarde et l’impression d’audiogrammes, et rien ne vous est facturé.</p></div>
+    </details>
 
     <details class="faq-item reveal">
       <summary>Puis-je annuler mon abonnement en tout temps&nbsp;?</summary>
@@ -253,6 +262,13 @@
          créés le 2026-08-05; les anciens liens sont désactivés. */
       mensuel: 'https://buy.stripe.com/14A7sN4BC7bW1i5eXa2Ji02',
       annuel:  'https://buy.stripe.com/7sY3cxc44cwgd0NcP22Ji03',
+      /* Créés le 2026-08-30 : abonnement à 0 $/mois (niveau gratuit) et
+         essai de 14 jours. Les deux sont en « payment_method_collection:
+         if_required » : aucune carte n'est demandée. L'essai est réglé sur
+         « missing_payment_method: cancel », donc sans carte il prend fin
+         de lui-même au 14e jour et rien n'est facturé. */
+      gratuit: 'https://buy.stripe.com/28E8wR0lmgMw6CpeXa2Ji04',
+      essai:   'https://buy.stripe.com/cNi9AV6JKfIs2m95mA2Ji05',
       portail: 'https://billing.stripe.com/p/login/7sY7sN2tuao84uh4iw2Ji00'
     }
   };
@@ -261,6 +277,25 @@
   var panels = document.querySelectorAll('[data-panel-billing]');
   var buy = document.getElementById('btn-acheter');
   var buyLabel = 'S’abonner (paiement sécurisé par Stripe)';
+  var essai = document.getElementById('btn-essai');
+  var gratuit = document.getElementById('btn-gratuit');
+
+  /* Active un bouton si l'URL est fournie, sinon l'affiche en « bientôt
+     disponible » (même comportement que le bouton d'abonnement). */
+  function lien(el, url, libelle, libelleInactif) {
+    if (!el) { return; }
+    if (url) {
+      el.href = url;
+      el.textContent = libelle;
+      el.classList.remove('btn--disabled');
+      el.removeAttribute('aria-disabled');
+    } else {
+      el.removeAttribute('href');
+      el.textContent = libelleInactif;
+      el.classList.add('btn--disabled');
+      el.setAttribute('aria-disabled', 'true');
+    }
+  }
 
   function activate(billing) {
     buttons.forEach(function (b) {
@@ -271,18 +306,8 @@
     panels.forEach(function (p) {
       p.hidden = p.getAttribute('data-panel-billing') !== billing;
     });
-    var url = ARA_CONFIG.enVente ? ARA_CONFIG.stripe[billing] : '';
-    if (url) {
-      buy.href = url;
-      buy.textContent = buyLabel;
-      buy.classList.remove('btn--disabled');
-      buy.removeAttribute('aria-disabled');
-    } else {
-      buy.removeAttribute('href');
-      buy.textContent = 'Paiement en ligne bientôt disponible';
-      buy.classList.add('btn--disabled');
-      buy.setAttribute('aria-disabled', 'true');
-    }
+    lien(buy, ARA_CONFIG.enVente ? ARA_CONFIG.stripe[billing] : '',
+         buyLabel, 'Paiement en ligne bientôt disponible');
   }
 
   buttons.forEach(function (b) {
@@ -290,6 +315,10 @@
       activate(b.getAttribute('data-billing'));
     });
   });
+  lien(essai, ARA_CONFIG.enVente ? ARA_CONFIG.stripe.essai : '',
+       'Essayer 14 jours, sans carte', 'Essai gratuit bientôt disponible');
+  lien(gratuit, ARA_CONFIG.enVente ? ARA_CONFIG.stripe.gratuit : '',
+       'Obtenir la licence gratuite', 'Licence gratuite bientôt disponible');
   activate('mensuel');
 })();
 </script>
