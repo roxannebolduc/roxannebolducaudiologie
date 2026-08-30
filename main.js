@@ -88,11 +88,18 @@
     b.setAttribute('role', 'region');
     b.setAttribute('aria-label', 'Consentement aux témoins (cookies)');
     b.innerHTML =
-      '<h3>Témoins (cookies)</h3>' +
+      '<div class="cookie-head">' +
+      '<span class="cookie-icon" aria-hidden="true">' +
+      '<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">' +
+      '<path d="M12 2a10 10 0 1 0 10 10 4 4 0 0 1-5-5 4 4 0 0 1-5-5"/>' +
+      '<path d="M8.5 8.5v.01"/><path d="M16 15.5v.01"/><path d="M12 12v.01"/><path d="M11 17v.01"/><path d="M7 14v.01"/>' +
+      '</svg></span>' +
+      '<div><span class="cookie-eyebrow">Confidentialité</span><h3>Témoins (cookies)</h3></div>' +
+      '</div>' +
       '<p>Ce site web conserve un seul témoin sur votre ordinateur : celui qui mémorise votre réponse ci-dessous. ' +
       'Il ne collecte aucune information sur la manière dont vous interagissez avec le site et ne vous suit pas. ' +
       'Pour en savoir plus, consultez notre <a href="confidentialite.html">Politique de confidentialité</a>.</p>' +
-      '<p>Si vous refusez, rien de plus n’est conservé : ce même témoin servira uniquement à se souvenir de votre préférence.</p>' +
+      '<p class="cookie-note">Si vous refusez, rien de plus n’est conservé : ce même témoin servira uniquement à se souvenir de votre préférence.</p>' +
       '<div class="cookie-actions">' +
       '<button type="button" class="btn btn--primary" data-consent="accepte">Accepter</button>' +
       '<button type="button" class="btn btn--ghost" data-consent="refuse">Refuser</button>' +
