@@ -79,11 +79,9 @@
       </ul>
 
       <div style="margin-top:auto;display:flex;flex-wrap:wrap;gap:.8rem;align-items:center">
-        <!-- Au lancement, réactiver le lien (l'URL « latest » pointe toujours
-             vers la dernière release GitHub) :
-        <a class="btn btn--ghost" href="https://github.com/roxannebolduc/roxannebolducaudiologie/releases/latest/download/ARA-Setup.exe">Télécharger ARA (Windows)</a>
-        -->
-        <a class="btn btn--ghost btn--disabled" aria-disabled="true">Téléchargement bientôt disponible</a>
+        <!-- La page /download reconnaît l'appareil (Windows x64/ARM, Mac) et
+             sert le bon installateur de la dernière release GitHub. -->
+        <a class="btn btn--ghost" href="https://ara-stripe-webhook.roxanne-bolduc.workers.dev/download" rel="noopener">Télécharger ARA (Windows ou Mac)</a>
         <a id="btn-gratuit" class="btn btn--ghost" href="#" rel="noopener">Obtenir la licence gratuite</a>
       </div>
       <p class="fineprint">L’utilisation des fonctions gratuites demeure régie par le <a href="cluf-ara.html" style="text-decoration:underline;text-underline-offset:3px">contrat de licence (CLUF) d’ARA</a>.</p>
@@ -252,11 +250,11 @@
      contrôle en tête de fichier). Tant qu'une URL est vide, le bouton
      d'achat correspondant reste désactivé. */
   var ARA_CONFIG = {
-    /* Passer enVente à true au lancement : les boutons d'achat s'activent.
-       Tant que false, le bouton affiche « bientôt disponible » (installateurs
-       macOS/Surface pas encore publiés — on ne peut pas livrer sur tous les
-       systèmes). */
-    enVente: false,
+    /* EN VENTE depuis le 2026-08-30 (lancement : v0.3.0 publiée, installateurs
+       Windows x64/ARM et Mac servis par la page /download du worker). Repasser
+       à false pour désactiver d'un coup les trois boutons (abonnement, essai,
+       licence gratuite). */
+    enVente: true,
     stripe: {
       /* Liens avec case d'acceptation du CLUF (consent_collection),
          créés le 2026-08-05; les anciens liens sont désactivés. */
