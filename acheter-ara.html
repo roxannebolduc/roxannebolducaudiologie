@@ -69,7 +69,7 @@
         <span class="price-amount">0&nbsp;$</span>
         <span class="price-period">pour toujours</span>
       </div>
-      <p class="price-note">Aucune carte de crédit, ni maintenant ni plus tard. Clé de licence gratuite, sans date d’expiration.</p>
+      <p class="price-note">Aucune carte de crédit, ni maintenant ni plus tard. Clé de licence gratuite, sans date d’expiration, requise au premier démarrage d’ARA.</p>
 
       <ul>
         <li><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 13l4 4L19 7"/></svg>Audiogramme interactif&nbsp;: saisie des seuils et calculs en temps réel</li>
@@ -79,12 +79,14 @@
       </ul>
 
       <div style="margin-top:auto;display:flex;flex-wrap:wrap;gap:.8rem;align-items:center">
-        <!-- La page /download reconnaît l'appareil (Windows x64/ARM, Mac) et
-             sert le bon installateur de la dernière release GitHub. -->
-        <a class="btn btn--ghost" href="https://ara-stripe-webhook.roxanne-bolduc.workers.dev/download" rel="noopener">Télécharger ARA (Windows ou Mac)</a>
+        <!-- Pas de bouton de téléchargement public : ARA exige une clé de
+             licence (même gratuite) au premier démarrage. Le lien de
+             téléchargement (page /download du worker, qui reconnaît
+             l'appareil) arrive dans le courriel automatique envoyé avec la
+             clé, une fois l'inscription Stripe complétée. -->
         <a id="btn-gratuit" class="btn btn--ghost" href="#" rel="noopener">Obtenir la licence gratuite</a>
       </div>
-      <p class="fineprint">L’utilisation des fonctions gratuites demeure régie par le <a href="cluf-ara.html" style="text-decoration:underline;text-underline-offset:3px">contrat de licence (CLUF) d’ARA</a>.</p>
+      <p class="fineprint">Votre clé de licence et le lien de téléchargement d’ARA (Windows ou Mac) vous sont envoyés par courriel dès l’inscription. L’utilisation des fonctions gratuites demeure régie par le <a href="cluf-ara.html" style="text-decoration:underline;text-underline-offset:3px">contrat de licence (CLUF) d’ARA</a>.</p>
     </div>
 
     <div class="price-card reveal">
@@ -120,7 +122,7 @@
 
       <div style="display:flex;flex-wrap:wrap;gap:.8rem;align-items:center">
         <a id="btn-acheter" class="btn btn--coral" href="#" rel="noopener">S’abonner (paiement sécurisé par Stripe)</a>
-        <a id="btn-essai" class="btn btn--ghost" href="#" rel="noopener">Essayer 14&nbsp;jours, sans carte</a>
+        <a id="btn-essai" class="btn btn--ghost" href="#" rel="noopener">Essai gratuit de 14&nbsp;jours</a>
         <a class="btn btn--ghost" href="mailto:audiologie.rb@gmail.com?subject=Question%20avant%20achat%20%E2%80%94%20ARA">Une question avant d’acheter&nbsp;?</a>
       </div>
 
@@ -152,13 +154,13 @@
         <span class="num">02</span>
         <div class="ic"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M21 8V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2h14a2 2 0 002-2v-1"/><path d="M3 7l9 6 9-6"/></svg></div>
         <h3>Recevez votre clé</h3>
-        <p>Votre clé de licence vous est transmise par courriel à l’adresse utilisée lors du paiement, au plus tard le jour ouvrable suivant. Une clé distincte est émise pour chaque siège.</p>
+        <p>Votre clé de licence et le lien de téléchargement d’ARA vous sont transmis aussitôt par courriel, à l’adresse utilisée lors du paiement. Une clé distincte est émise pour chaque siège.</p>
       </article>
       <article class="scard reveal">
         <span class="num">03</span>
         <div class="ic"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M13 2L3 14h7l-1 8 10-12h-7z"/></svg></div>
         <h3>Activez et rédigez</h3>
-        <p>Entrez la clé dans ARA sur vos postes (jusqu’à trois par siège). Les fonctions sous licence se déverrouillent immédiatement&nbsp;: audiogramme, calculs, génération de rapports.</p>
+        <p>Installez ARA, puis entrez la clé au premier démarrage sur vos postes (jusqu’à trois par siège). Les fonctions sous licence se déverrouillent immédiatement&nbsp;: audiogramme, calculs, génération de rapports.</p>
       </article>
     </div>
 
@@ -314,7 +316,7 @@
     });
   });
   lien(essai, ARA_CONFIG.enVente ? ARA_CONFIG.stripe.essai : '',
-       'Essayer 14 jours, sans carte', 'Essai gratuit bientôt disponible');
+       'Essai gratuit de 14 jours', 'Essai gratuit bientôt disponible');
   lien(gratuit, ARA_CONFIG.enVente ? ARA_CONFIG.stripe.gratuit : '',
        'Obtenir la licence gratuite', 'Licence gratuite bientôt disponible');
   activate('mensuel');
