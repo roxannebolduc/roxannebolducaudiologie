@@ -107,7 +107,8 @@ p{margin:0 0 1rem}
   font-family:var(--body);font-weight:600;font-size:.78rem;letter-spacing:.16em;
   text-transform:uppercase;color:var(--coral-deep);display:inline-flex;align-items:center;gap:.55rem;margin:0 0 1rem;
 }
-.eyebrow::before{content:"";width:26px;height:1px;background:var(--coral)}
+/* Étiquette en pastille (remplace le long trait) */
+.eyebrow{background:var(--coral-tint);padding:.38rem .85rem;border-radius:999px;letter-spacing:.14em}
 .lead{font-size:var(--lead);color:var(--ink-soft);max-width:60ch}
 .muted{color:var(--muted)}
 .center{text-align:center}
@@ -294,7 +295,7 @@ svg .plot-line.l{stroke:var(--azure)}
 .dark{background:var(--ink);color:#e9edf0}
 .dark h1,.dark h2,.dark h3{color:#fff}
 .dark .eyebrow{color:#f0a58e}
-.dark .eyebrow::before{background:var(--coral)}
+.dark .eyebrow{background:rgba(240,165,142,.14)}
 .dark .lead,.dark p{color:#b6c2cc}
 .dark .muted{color:#8394a1}
 
@@ -591,7 +592,7 @@ svg .plot-line.l{stroke:var(--azure)}
   font-weight:600;font-size:.68rem;letter-spacing:.15em;text-transform:uppercase;
   color:var(--coral-deep);margin-bottom:.2rem;
 }
-.cookie-eyebrow::before{content:"";width:18px;height:1px;background:var(--coral)}
+.cookie-eyebrow{background:var(--coral-tint);padding:.2rem .6rem;border-radius:999px}
 .cookie-banner h3{font-family:var(--display);font-weight:600;font-size:1.08rem;letter-spacing:-.01em;color:var(--ink);margin:0}
 .cookie-banner p{font-size:.84rem;line-height:1.55;color:var(--ink-soft);margin:0 0 .55rem}
 .cookie-banner .cookie-note{font-size:.78rem;color:var(--muted);margin-bottom:1rem}
